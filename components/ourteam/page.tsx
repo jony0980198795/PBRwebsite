@@ -1,4 +1,4 @@
-import { motion, useInView, easeOut, Variants } from "framer-motion";
+import { motion, easeOut, Variants } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
+import { Mail, Phone, Facebook } from "lucide-react";
 
 export default function Header() {
   const [showHeader, setShowHeader] = useState(true);
@@ -108,6 +109,7 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
+      <FloatingContactButton />
     </>
   );
 }
@@ -138,6 +140,60 @@ function LanguageSwitcher() {
           EN
         </button>
       </div>
+    </div>
+  );
+}
+
+function FloatingContactButton() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="fixed inset-0 z-40 flex items-end justify-end pr-6 pb-4 pointer-events-none">
+      {/* Contact Card */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            transition={{ duration: 0.25 }}
+            className="mr-4 bg-[#151A2C] text-white rounded-xl shadow-xl p-4 space-y-3 pointer-events-auto"
+          >
+            <div className="flex items-center gap-3 text-sm">
+              <Phone size={16} />
+              <p>086-3636-324</p>
+            </div>
+            <div className="flex items-center gap-3 text-sm">
+              <Mail size={16} />
+              <p>pbr@pbr.co.th</p>
+            </div>
+            <div className="flex items-center gap-3 text-sm">
+              <Facebook size={16} />
+              <p>PBR Graphene Materials</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Floating Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="pointer-events-auto"
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+      >
+        <Link
+          href="/contact"
+          className="flex items-center justify-center
+                     w-14 h-14 rounded-full
+                     bg-gradient-to-r from-purple-600 to-indigo-600
+                     text-white shadow-xl hover:scale-105 transition"
+        >
+          <Mail size={22} />
+        </Link>
+      </motion.div>
     </div>
   );
 }

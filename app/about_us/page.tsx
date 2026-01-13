@@ -1,9 +1,7 @@
 "use client"
 
-import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image"; // ถ้าใช้ Next.js
-import { FaHistory, FaLightbulb, FaLeaf, FaGlobe, FaCheckCircle } from "react-icons/fa";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 const AboutUs = () => {

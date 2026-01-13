@@ -1,11 +1,8 @@
 'use client'
 
-import Image from "next/image";
 import { FaHistory, FaLightbulb, FaLeaf, FaGlobe } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { title } from "process";
-import { details } from "framer-motion/client";
 import HeroSlide from "@/components/home/page";
 import Link from "next/link";
 import OurTeam from "@/components/ourteam/page";

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface GalleryProps {
     mainImage: string;      // รูปปัจจุบันที่กำลังแสดง (รับมาจาก State ของตัวแม่)
     initialImage: string;   // รูปหลักเริ่มต้นของสินค้า

@@ -2,15 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useLanguage } from "@/context/LanguageContext"; // 1. นำเข้า Language Context
+import { useLanguage } from "@/context/LanguageContext"; 
+import Image from "next/image";
 
 export default function Products() {
     const { t } = useLanguage(); // 2. ดึงตัวแปร t (คำแปล) มาใช้งาน
 
     // 3. เตรียมข้อมูลสินค้าจาก Dictionary
-    // สมมติว่าใน JSON เราเก็บสินค้าไว้ใน t.products_list ซึ่งเป็น Array
-    // หรือถ้าคุณมีไฟล์ data.ts เดิม ให้ปรับให้ใช้ ID เป็นตัวอ้างอิงคีย์ใน JSON แทน
-    
     const productItems = [
         { id: "pd_1", image: "/products/grbg_brown/2.png" }, // ใส่ path รูปภาพให้ตรงกับโปรเจกต์
         { id: "pd_2", image: "/products/grbg_gray/2.png" },

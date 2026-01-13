@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect} from "react";
 import { useInView } from "react-intersection-observer";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -14,7 +14,7 @@ export default function HeroSlide() {
   ];
 
   const [current, setCurrent] = useState(0);
-  const {lang, t}=useLanguage();
+  const {t}=useLanguage();
 
   // Auto slide
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function HeroSlide() {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   // Scroll in view animation
   const { ref, inView } = useInView({ threshold: 0.2 });

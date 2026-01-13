@@ -1,12 +1,10 @@
 'use client'
 import { motion } from "framer-motion";
-import Image from "next/image"
-import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function News() {
-    const [selected, setSelected] = useState(null);
     const {t} = useLanguage();
     const highlights = [
         {

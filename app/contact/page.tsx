@@ -1,6 +1,6 @@
 "use client"
 
-import { FaPhone, FaEnvelope, FaGlobe, FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Contact() {

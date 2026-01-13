@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function CustomizedSection() {
   const ref_customize = useRef(null);
-  const {t}=useLanguage();
+  const { t } = useLanguage();
 
   return (
     <section className="w-full max-w-6xl py-10 px-6 mx-auto">
@@ -45,9 +45,14 @@ export default function CustomizedSection() {
             {t.home.custom.cus_detail}
           </p>
 
-          <button className="w-fit px-8 py-3 rounded-xl bg-black text-white font-medium hover:bg-gray-800 transition shadow-md">
-            <Link href="/product_prev">{t.button.readmore}</Link>
-          </button>
+          <Link
+            href="/innovation"
+            className="inline-block w-fit px-8 py-3 rounded-xl
+             bg-black text-white font-medium
+             hover:bg-gray-800 transition shadow-md"
+          >
+            {t.button.readmore}
+          </Link>
         </motion.div>
       </div>
     </section>

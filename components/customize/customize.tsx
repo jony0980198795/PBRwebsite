@@ -2,9 +2,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function CustomizedSection() {
   const ref_customize = useRef(null);
+  const {t}=useLanguage();
 
   return (
     <section className="w-full max-w-6xl py-10 px-6 mx-auto">
@@ -36,19 +38,19 @@ export default function CustomizedSection() {
           className="flex flex-col space-y-6"
         >
           <h2 className="text-3xl font-bold text-gray-800">
-            Customized Graphene Formulations Developed To Meet Specific Technical Needs
+            {t.home.custom.cus_title}
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            Premium graphene formulations engineered with precision to meet advanced technical
-            demands — enhancing performance, consistency, and innovation.
+            {t.home.custom.cus_detail}
           </p>
 
           <button className="w-fit px-8 py-3 rounded-xl bg-black text-white font-medium hover:bg-gray-800 transition shadow-md">
-            <Link href="/product_prev">Read More →</Link>
+            <Link href="/product_prev">{t.button.readmore}</Link>
           </button>
         </motion.div>
       </div>
     </section>
   );
 }
+

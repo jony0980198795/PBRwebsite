@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function HeroSlide() {
   const images = [
@@ -13,6 +14,7 @@ export default function HeroSlide() {
   ];
 
   const [current, setCurrent] = useState(0);
+  const {lang, t}=useLanguage();
 
   // Auto slide
   useEffect(() => {
@@ -56,11 +58,10 @@ export default function HeroSlide() {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            We are shaping the future of material science
+            {t.welcome}
           </h1>
           <p className="text-white text-lg md:text-2xl max-w-2xl mx-auto">
-            Driving innovation in advanced materials, graphene solutions, 
-            and sustainable technology for global industries.
+            {t.home.drivinginnovation}
           </p>
         </motion.div>
       </div>

@@ -2,6 +2,7 @@ import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const containerVariants:Variants = {
   hidden: { opacity: 0, y: 50 },
@@ -28,6 +29,7 @@ const cardVariants: Variants = {
 
 export default function GrapheneInnovation() {
   const ref_graphen_innovation = useRef(null);
+  const {t}=useLanguage();
 
   return (
     <section className="w-full max-w-6xl mt-16 py-10 px-6 mx-auto">
@@ -44,7 +46,7 @@ export default function GrapheneInnovation() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          GRAPHENE INNOVATION
+          {t.home.grapinnovan.graptitle}
         </motion.h2>
 
         <motion.div
@@ -89,11 +91,7 @@ export default function GrapheneInnovation() {
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.3 }}
         >
           <p>
-            <b>GRA-V</b> products is a leading developer of graphene — a next-generation
-            material poised to transform industries. We focus on the research and
-            development of advanced manufacturing technologies that meet the evolving
-            needs of diverse industrial applications, driving efficient and scalable
-            real-world solutions.
+            <b>{t.home.grapinnovan.grav}</b> {t.home.grapinnovan.gradetail}
           </p>
         </motion.div>
       </motion.div>

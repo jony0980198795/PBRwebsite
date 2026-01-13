@@ -2,52 +2,50 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Innovation() {
+    const {t} = useLanguage();
     const innovations = [
         {
-            title: "COATING",
-            description:
-                "Graphene plays a crucial role in coating applications due to its outstanding physical and chemical properties compared to conventional materials. It is used as an “Advanced Coating Material” to enhance durability, strength, and other special properties of various surfaces.",
+            title: t.innovation.section_1.title,
+            description: t.innovation.section_1.detail,
             image: "/innovation/coating.jpg",
             hoverImage: "/innovation/1.png",
         },
         {
-            title: "EV TIRES",
-            description:
-                "1. EV vehicles require tires with lower wear and higher range. Graphene helps reduce rolling resistance, improving efficiency.\n\n2. Using graphene as a filler or additive can make EV tires more sustainable compared to conventional materials.\n\n3. Manufacturers and researchers are increasingly interested in graphene. For example, Levidian collaborates with research organizations to test graphene in tire materials.",
+            title: t.innovation.section_2.title,
+            description:t.innovation.section_2.detail,
             image: "/innovation/ev-tires.jpg",
             hoverImage: "/innovation/2.png",
         },
         {
-            title: "FABRIC",
-            description:
-                "Graphene has excellent thermal and electrical conductivity. When applied to fabrics, it helps distribute heat or regulate the wearer’s temperature. Projects like Graphene Flagship coat graphene layers onto textile fibers, producing conductive, lightweight, flexible, and breathable fabrics.",
+            title: t.innovation.section_3.title,
+            description:t.innovation.section_3.detail,
             image: "/innovation/fabric.jpg",
             hoverImage: "/innovation/3.png",
         },
         {
-            title: "PIPELINE",
-            description:
-                "1. Industrial pipelines are exposed to high temperatures, pressure, and corrosive substances — graphene coatings improve durability and thermal conductivity.\n\n2. Companies like CUBSON use graphene-based powder coatings for oil and gas pipelines to enhance resistance to heat and chemicals.",
+            title: t.innovation.section_4.title,
+            description:t.innovation.section_4.detail,
             image: "/innovation/pipeline.jpg",
             hoverImage: "/innovation/4.png",
         },
         {
-            title: "MILITARY",
-            description: "Armor and Protective Equipment\n 1.Personal Armor(Body Armor/ Helmets) Graphene coatings or inclusions to increase strength and impact resistance Weight reduction and improved mobility\n\n2.Vehicle Armor Graphene is incorporated into composite materials for armored vehicles to reduce weight while maintaining strength",
+            title: t.innovation.section_5.title,
+            description: t.innovation.section_5.detail,
             image: "/innovation/tank.png",
             hoverImage: "/innovation/solder.png"
         },
         {
-            title: "Concreat",
-            description: "Graphene-reinforced concrete is one of the fastest-growing construction material innovations in recent years, as graphene can “enhance” concrete properties in several areas, including strength, water resistance, crack resistance, and durability.",
+            title: t.innovation.section_6.title, //CONCREAT
+            description: t.innovation.section_6.detail,
             image: "/innovation/concreat.png",
             hoverImage: "/innovation/concreat_hover.png"
         },
          {
-            title: "Wire",
-            description: "“Graphene-based cable insulation” is another promising application in the electrical and electronic materials industry. This is because graphene can significantly enhance the strength, thermal conductivity, and resistance to degradation of insulation.",
+            title: t.innovation.section_7.title,
+            description: t.innovation.section_7.detail,
             image: "/innovation/cable.png",
             hoverImage: "/innovation/cable_hov.png"
         },
@@ -64,9 +62,9 @@ export default function Innovation() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight"
                 >
-                    Innovation with{" "}
+                    <p>{t.innovation.title_1}</p>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
-                        Graphene
+                        {t.innovation.title_2}
                     </span>
                 </motion.h1>
 
@@ -77,7 +75,7 @@ export default function Innovation() {
                     transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                     className="text-gray-600 md:text-lg leading-relaxed"
                 >
-                    Explore the cutting-edge applications of graphene in modern industries — from coatings, EV tires, and smart fabrics, to advanced pipeline solutions.
+                    {t.innovation.inno_desc}
                 </motion.p>
 
                 {/* Animated Gradient Divider */}

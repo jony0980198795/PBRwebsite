@@ -1,44 +1,59 @@
-// components/Footer.tsx
+"use client"
+
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+import {Phone, Mail, Facebook} from "lucide-react";
 
 export default function Footer() {
+  const {t}=useLanguage();
+
   return (
     <footer className="bg-gray-900 text-gray-300 px-8 py-10 mt-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">About Us</h3>
-          <p className="text-sm leading-relaxed">We pride ourselves not only on the quality of our materials, but also on the technical support and collaboration we offer to researchers, engineers, and industry professionals.</p>
-          <p className="text-sm leading-relaxed mt">For more details about our products and services, contacts us via</p>
+          <h3 className="text-lg font-semibold text-white mb-3">{t.footer.about}</h3>
+          <p className="text-sm leading-relaxed">{t.footer.aboutdetails_1}</p>
+          <p className="text-sm leading-relaxed mt">{t.footer.aboutdetails_2}</p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+          <h3 className="text-lg font-semibold text-white mb-3">{t.footer.quicklink}</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/products">Products</Link></li>
-            <li><Link href="/about_us">About Us</Link></li>
-            <li><Link href="/news">News</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/">{t.nav.home}</Link></li>
+            <li><Link href="/products">{t.nav.product}</Link></li>
+            <li><Link href="/about_us">{t.nav.about}</Link></li>
+            <li><Link href="/news">{t.nav.news}</Link></li>
+            <li><Link href="/contact">{t.nav.contact}</Link></li>
           </ul>
         </div>
 
         {/* For Partners */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Address</h3>
+          <h3 className="text-lg font-semibold text-white mb-3">{t.footer.about}</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/partner">PBR Company Limited</Link></li>
-            <p>33 Mu 3, Surasak Sub-district, Si Racha District, Chonburi 20110 THAILAND.</p>
+            <li><Link href="/partner">{t.footer.about_com}</Link></li>
+            <p>{t.footer.pbr_address}</p>
           </ul>
         </div>
 
         {/* Contact */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Contact US</h3>
-          <p>Phone: +66(0)86 3636 324</p>
-          <p className="text-sm">E-mail: pbr@pbr.co.th</p>
+          <h3 className="text-lg font-semibold text-white mb-3">{t.nav.contact}</h3>
+          <div className="flex item-center gap-2">
+            <Phone size={16}/>
+            <p>{t.footer.phone}</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Mail size={16}/>
+            <p className="text-sm">{t.footer.email}</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Facebook size={16}/>
+            <a href="https://www.facebook.com/profile.php?id=61586373485649">Facebook</a>
+          </div>
           <div>
             <Image
               src="/about/dbd.png"

@@ -13,13 +13,12 @@ import CustomizedSection from "@/components/customize/customize";
 import ProductSection from "@/components/products/our-products";
 import GrapheneInnovation from "@/components/innovation/page";
 import SpecificationSection from "@/components/specification/page";
-import Th_lang from "./language/lang";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
   const ref = useRef(null);
-  const ref_customize = useRef(null);
-  const ref_graphen_innovation = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const {t}=useLanguage();
   return (
     <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-white to-gray-100">
       {/* Hero Section */}
@@ -42,7 +41,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-white text-4xl md:text-6xl font-bold mb-4"
           >
-            Leading the Future
+            {t.home.title}
           </motion.h1>
 
           <motion.p
@@ -51,7 +50,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-white text-lg md:text-6xl font-bold max-w-4xl"
           >
-            of Graphene Oxide
+            {t.home.title_1}
           </motion.p>
 
           <motion.p
@@ -60,19 +59,19 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-white text-2xl md:text-2xl max-w-xl mt-4"
           >
-            We are shaping the next era of advanced materials through innovation, scale, and uncompromising quality. Our leadership in Graphene Oxide technology drives new possibilities for global industries.
+            {t.home.title_detail}
           </motion.p>
         </div>
       </section>
       {/* Our company */}
       <section className="w-full max-w-6xl mx-auto py-12 px-6">
-        <h2 className="text-3xl font-semibold text-center mb-10">Our Identity</h2>
+        <h2 className="text-3xl font-semibold text-center mb-10">{t.home.our_identity}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { icon: <FaHistory className="text-4xl text-black-600 mb-4" />, title: "Our History", link: "/about_us", detail: "Founded in 2023 by industry experts." },
-            { icon: <FaLightbulb className="text-4xl text-black-500 mb-4" />, title: "Innovation", link: "/innovation", detail: "Leading graphene and material science." },
-            { icon: <FaLeaf className="text-4xl text-black-500 mb-4" />, title: "Sustainability", link: "/", detail: "Eco-friendly and cost-effective solutions." },
-            { icon: <FaGlobe className="text-4xl text-black-500 mb-4" />, title: "Global Reach", link: "/news", detail: "Serving domestic and international markets." },
+            { icon: <FaHistory className="text-4xl text-black-600 mb-4" />, title: t.home.our_history.our_his, link: "/about_us", detail: t.home.our_history.our_detail },
+            { icon: <FaLightbulb className="text-4xl text-black-500 mb-4" />, title: t.home.innovation.innov, link: "/innovation", detail: t.home.innovation.innov_detail},
+            { icon: <FaLeaf className="text-4xl text-black-500 mb-4" />, title: t.home.sustainability.sustain, link: "/", detail: t.home.sustainability.sustain_detail },
+            { icon: <FaGlobe className="text-4xl text-black-500 mb-4" />, title: t.home.global.global , link: "/news", detail:  t.home.global.global_detail },
           ].map((item, index) => (
             <motion.div
               key={index}

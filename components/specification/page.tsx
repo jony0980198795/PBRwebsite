@@ -1,32 +1,7 @@
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
-const specification = [{
-    title: "Mechanical Properties",
-    details: "High mechanical strength and durability.",
-    image: "/specification/mechanical.png"
-},
-{
-    title: "Appearance (Color)",
-    details: "Brown to very dark brown.",
-    image: "/specification/appearance.png"
-},
-{
-    title: "Appearance (Form)",
-    details: "Powder or suspension.",
-    image: "/specification/appearance_form.png"
-},
-{
-    title: "Electrical Conductivity",
-    details: "Non-conductive insulator.",
-    image: "/specification/electrical.png"
-},
-{
-    title: "Concentration",
-    details: "1–10 mg/ml (dispersion in H₂O).",
-    image: "/specification/concentration.png"
-}
-]
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
@@ -51,6 +26,36 @@ const cardVariants: Variants = {
     },
 };
 export default function SpecificationSection() {
+
+    const {t}=useLanguage();
+
+    const specification = [{
+        title: t.home.specification.spe_list_1.spe_title,
+        details: t.home.specification.spe_list_1.spe_detail,
+        image: "/specification/mechanical.png"
+    },
+    {
+        title: t.home.specification.spe_list_2.spe_title,
+        details: t.home.specification.spe_list_2.spe_detail,
+        image: "/specification/appearance.png"
+    },
+    {
+        title: t.home.specification.spe_list_3.spe_title,
+        details: t.home.specification.spe_list_3.spe_detail,
+        image: "/specification/appearance_form.png"
+    },
+    {
+        title: t.home.specification.spe_list_4.spe_title,
+        details: t.home.specification.spe_list_4.spe_detail,
+        image: "/specification/electrical.png"
+    },
+    {
+        title: t.home.specification.spe_list_5.spe_title,
+        details: t.home.specification.spe_list_5.spe_detail,
+        image: "/specification/concentration.png"
+    }
+    ]
+
     return (
         <section className="py-20 bg-gradient-to-b from-gray-50 via-white to-gray-100">
             <motion.div
@@ -69,10 +74,10 @@ export default function SpecificationSection() {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4">
-                        Specification & Characterizations
+                        {t.home.specification.spe_title}
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Explore the key physical and chemical properties that define our advanced nanomaterial innovations.
+                        {t.home.specification.spe_detail}
                     </p>
                 </motion.div>
 

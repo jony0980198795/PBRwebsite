@@ -3,55 +3,52 @@ import { motion } from "framer-motion";
 import Image from "next/image"
 import { useState } from "react";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function News() {
     const [selected, setSelected] = useState(null);
+    const {t} = useLanguage();
     const highlights = [
         {
-            title: "Superior Corrosion Protection",
+            title: t.news.section.section_1.super,
             image: "/news/1.png",
-            description: "Graphene coatings act as a strong barrier against moisture and oxygen, significantly reducing corrosion in oil and gas pipelines."
+            description: t.news.section.section_1.detail
         },
         {
-            title: "Enhanced Durability and Thermal Resistance",
+            title: t.news.section.section_2.enhance,
             image: "/news/2.png",
-            description: "With its exceptional strength and thermal conductivity, graphene improves the mechanical stability and heat tolerance of pipeline coatings."
+            description: t.news.section.section_2.detail
         },
         {
-            title: "Future-Ready for Hydrogen Transport",
+            title: t.news.section.section_3.future,
             image: "/news/3.png",
-            description: "Graphene-based layers can help prevent hydrogen embrittlement, making pipelines safer for next-generation hydrogen energy systems."
+            description: t.news.section.section_3.detail
         }
-    ];
-
-    const latestNews = [
-        { image: "/about/meeting.jpg", date: "26 ต.ค. 2568", text: "“มิตรผล” จับมือ “SCGC” พัฒนาบรรจุภัณฑ์เพื่อความยั่งยืน เร่งขับเคลื่อนเศรษฐกิจหมุนเวียน ส่งเสริมการทำ Closed-Loop นำพลาสติกใช้แล้วสู่การรีไซเคิล" },
-        { image: "/about/meeting.jpg", date: "16 ต.ค. 2568", text: "กรุงไทย ร่วมกับ ONNEX by SCG ผลักดันสำนักงานใหญ่ อาคารสุขุมวิท รับ LEED ระดับ PLATINUM มุ่งสู่เป้าหมาย NET ZERO อย่างต่อเนื่อง" },
     ];
 
     const businessUnits = [
         {
-            title: "Construction Materials and Concrete",
+            title: t.news.business.group.group_1,
             link: "/our_research/construction",
         },
         {
-            title: "Polymers and Coatings",
+            title: t.news.business.group.group_2,
             link: "/our_research/polymers",
         },
         {
-            title: "Electrical and Energy",
+            title: t.news.business.group.group_3,
             link: "/our_research/electrical",
         },
         {
-            title: "Environment and Water",
+            title: t.news.business.group.group_4,
             link: "/our_research/environment",
         },
         {
-            title: "Resources and Recycling",
+            title: t.news.business.group.group_5,
             link: "/our_research/resources",
         },
         {
-            title: "Health and Sustainable Life Technologies",
+            title: t.news.business.group.group_6,
             link: "/our_research/health",
         },
     ];
@@ -67,7 +64,7 @@ export default function News() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <p>Latest News</p>
+                    <p>{t.news.title}</p>
                 </motion.h2>
 
                 <div className="space-y-8 max-w-5xl mx-auto">
@@ -118,7 +115,7 @@ export default function News() {
                                     className="mt-4 self-start px-5 py-2 text-sm font-semibold bg-blue-600 text-white rounded-lg 
                                            hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300"
                                 >
-                                    Read more →
+                                    {t.news.btn}
                                 </motion.button>
                             </div>
                         </motion.div>
@@ -136,7 +133,7 @@ export default function News() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    PBRGROUP Business
+                    {t.news.business.title}
                 </motion.h2>
 
                 {/* 🔹 Cards Grid */}
@@ -197,7 +194,7 @@ export default function News() {
                         transition={{ duration: 1, delay: 0.3 }}
                         className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg"
                     >
-                        Power Your Business With Innovation
+                        {t.news.power.title}
                     </motion.h1>
 
                     <motion.p
@@ -206,7 +203,7 @@ export default function News() {
                         transition={{ duration: 1, delay: 0.6 }}
                         className="text-lg md:text-xl mb-6 text-gray-100"
                     >
-                        Delivering cutting-edge nanomaterial solutions for the future of industry.
+                        {t.news.power.detail}
                     </motion.p>
 
                     <motion.button
@@ -219,91 +216,49 @@ export default function News() {
                         className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl 
                                shadow-lg transition font-semibold"
                     >
-                        Join Us
+                        {t.news.power.btn}
                     </motion.button>
                 </motion.div>
             </section>
             {/* Stats */}
-            <HighlightsSection />
-
-            {/* About Section */}
-            {/* <section className="w-full max-w-6xl py-20 px-4 md:px-6 mx-auto">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Investor Relations</h2>
-                    <div className="overflow-x-auto">
-                        <table className="min-w-full border border-gray-200 rounded-lg overflow-hidden">
-                            <thead className="bg-gray-100 border-b hidden md:table-header-group">
-                                <tr>
-                                    <th className="py-3 px-4 text-left font-semibold text-gray-700">Title</th>
-                                    <th className="py-3 px-4 text-left font-semibold text-gray-700">Category</th>
-                                    <th className="py-3 px-4 text-center font-semibold text-gray-700">Download</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y md:divide-y-0">
-                                {[
-                                    { title: "User Manual", category: "Document" },
-                                    { title: "Usage Precautions", category: "Document" },
-                                ].map((item, idx) => (
-                                    <tr key={idx} className="block md:table-row mb-4 md:mb-0 hover:bg-gray-50 rounded-lg md:rounded-none">
-                                        <td className="block md:table-cell py-2 px-4 text-left md:text-left font-medium text-gray-800">
-                                            <span className="md:hidden font-semibold">Title: </span>
-                                            {item.title}
-                                        </td>
-                                        <td className="block md:table-cell py-2 px-4 text-left md:text-left">
-                                            <span className="md:hidden font-semibold">Category: </span>
-                                            {item.category}
-                                        </td>
-                                        <td className="block md:table-cell py-2 px-4 text-center">
-                                            <button className="text-blue-600 hover:text-blue-800 font-semibold">Download</button>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <div className="bg-gray-50 p-4 rounded-lg shadow text-center">Icon 1</div>
-                    <div className="bg-gray-50 p-4 rounded-lg shadow text-center">Icon 2</div>
-                    <div className="bg-gray-50 p-4 rounded-lg shadow text-center">Icon 3</div>
-                </div>
-            </section> */}
+            <HighlightsSection/>
         </main>
     )
 }
 
 function HighlightsSection() {
+    const {t} = useLanguage();
+
     const cards = [
         {
             icon: "💡",
             bg: "bg-red-100 text-red-700",
             value: "",
-            text: "The company's products and manufacturing processes are of high-quality standards, with a production capacity that can be continuously expanded each year to meet the growing market demand.",
+            text: t.news.port.port1,
         },
         {
             icon: "🌱",
             bg: "bg-green-100 text-green-700",
             value: "",
-            text: "Our current production capacity is approximately 2 tons per year.",
+            text: t.news.port.port2,
         },
         {
             icon: "🏢",
             bg: "bg-yellow-100 text-yellow-700",
             value: "",
-            text: "The company is well-prepared to scale up its production capacity in the future in order to meet the growing demands of an expanding industry.",
+            text: t.news.port.port3,
         },
         {
             icon: "🏢",
             bg: "bg-yellow-100 text-yellow-700",
             value: "",
-            text: "Our team consists of highly skilled professionals with deep expertise and a passion for excellence.",
+            text: t.news.port.port4,
         },
         {
             icon: "🔬",
             bg: "bg-blue-100 text-blue-700",
             value: "",
-            text: "We focus on the research and development of advanced manufacturing technologies that meet the evolving needs of diverse industrial applications",
+            text: t.news.port.port5,
         },
     ];
 

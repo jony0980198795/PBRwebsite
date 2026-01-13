@@ -1,0 +1,424 @@
+{
+    "nav": {
+        "home": "Home",
+        "product": "Product",
+        "innovation": "Innovation",
+        "news": "News",
+        "about": "About Us",
+        "contact": "Contact Us"
+    },
+    "home": {
+        "title": "Leading the Future",
+        "title_1": "of Graphene Oxide",
+        "title_detail": "We are shaping the next era of advanced materials through innovation, scale, and uncompromising quality. Our leadership in Graphene Oxide technology drives new possibilities for global industries.",
+        "our_identity": "Our Identity",
+        "our_history": {
+            "our_his": "Our History",
+            "our_detail": "Founded in 2023 by industry experts."
+        },
+        "innovation": {
+            "innov": "Innovation",
+            "innov_detail": "Leading graphene and material science."
+        },
+        "sustainability": {
+            "sustain": "Sustainability",
+            "sustain_detail": "Eco-friendly and cost-effective solutions."
+        },
+        "global": {
+            "global": "Global Reach",
+            "global_detail": "Serving domestic and international markets."
+        },
+        "our_product": {
+            "our_pd_title": "Our Products",
+            "product_1": {
+                "pd_name": "Graphene Oxide Powder",
+                "pd_detail": "High-purity Graphene Oxide Powder engineered for exceptional dispersion and surface activity. Ideal for advanced applications in composites, coatings, energy storage, and research development. Ensures consistent quality, scalability, and superior performance."
+            },
+            "product_2": {
+                "pd_name": "Reduced graphene oxide powder",
+                "pd_detail": "With high conductivity and enhanced stability. Engineered for advanced applications in electronics, energy storage, sensors, and high-performance composites, ensuring consistent quality and superior functionality."
+            },
+            "product_3": {
+                "pd_name": "Graphene Oxide Dispersion in H₂O",
+                "pd_detail": "High-purity dispersion ready for advanced applications in coatings, composites, energy storage, and research. Ensures uniform performance and superior processability."
+            },
+            "product_4": {
+                "pd_name": "Reduced Graphene Oxide Dispersion in H₂O",
+                "pd_detail": "Highly conductive, stable dispersion engineered for advanced applications in electronics, energy storage, sensors, and high-performance composites. Ensures consistent quality and superior processability."
+            }
+        },
+        "specification": {
+            "spe_title": "Specification & Characterizations",
+            "spe_detail": "Explore the key physical and chemical properties that define our advanced nanomaterial innovations",
+            "spe_list_1": {
+                "spe_title": "Mechanical Properties",
+                "spe_detail": "High mechanical strength and durability."
+            },
+            "spe_list_2": {
+                "spe_title": "Appearance (Color)",
+                "spe_detail": "Brown to very dark brown."
+            },
+            "spe_list_3": {
+                "spe_title": "Appearance (Form)",
+                "spe_detail": "Powder or suspension."
+            },
+            "spe_list_4": {
+                "spe_title": "Electrical Conductivity",
+                "spe_detail": "Non-conductive insulator."
+            },
+            "spe_list_5": {
+                "spe_title": "Concentration",
+                "spe_detail": "1–10 mg/ml (dispersion in H₂O)."
+            }
+        },
+        "custom": {
+            "cus_title": "Customized Graphene Formulations Developed To Meet Specific Technical Needs",
+            "cus_detail": "Premium graphene formulations engineered with precision to meet advanced technical demands — enhancing performance, consistency, and innovation."
+        },
+        "drivinginnovation": "Driving innovation in advanced materials, graphene solutions, and sustainable technology for global industries.",
+        "grapinnovan": {
+            "graptitle": "GRAPHENE INNOVATION",
+            "grav": "GRA-V",
+            "gradetail": "products is a leading developer of graphene — a next-generation material poised to transform industries. We focus on the research and development of advanced manufacturing technologies that meet the evolving needs of diverse industrial applications, driving efficient and scalable real-world solutions."
+        },
+        "ourteam": {
+            "ourteamtitle": "OUR TEAM",
+            "person_1": {
+                "name": "Mr. Phornpisut Palanugoolsagul",
+                "position": "Co-Founder & CEO",
+                "details": "A logistics and supply chain expert."
+            },
+            "person_2": {
+                "name": "Mr. Kavee Rakngern",
+                "position": "Co-Founder & COO",
+                "details": "Specialist in Automation Systems & Graphene Production."
+            },
+            "person_3": {
+                "name": "Professor Dr. Pichatt Palanugool",
+                "position": "Senior Advisor",
+                "details": "Expert in Graphene Materials, nanotechnology innovations, and industrial applications."
+            }
+        }
+    },
+    "ui": {
+        "available_packaging": "Available Packaging",
+        "properties_title": "Properties",
+        "elemental_title": "Elemental Analysis",
+        "spec_title": "Specifications",
+        "order": "สั่งซื้อ",
+        "close": "ปิด"
+    },
+    "products": {
+        "our_pd_title": "Our Products",
+        "pd_desc": "Advanced Graphene & Nanomaterial Solutions engineered to elevate performance, strength, durability, and sustainability.",
+        "pd_1": {
+            "pd_name": "Graphene Oxide Powder",
+            "pd_desc": "High-purity Graphene Oxide Powder engineered for exceptional dispersion and surface activity. Ideal for advanced applications in composites, coatings, energy storage, and research development. Ensures consistent quality, scalability, and superior performance.",
+            "highlight": "High conductivity, enhanced stability, engineered for advanced technology applications.",
+            "details": {
+                "packagingSize": [
+                    "1 g",
+                    "100 g",
+                    "500 g",
+                    "1,000 g"
+                ],
+                "productSizeImage": [
+                    "/products/grbg_brown/1.png",
+                    "/products/grbg_brown/2.png",
+                    "/products/grbg_brown/3.png",
+                    "/products/grbg_brown/4.png"
+                ],
+                "properties": {
+                    "sheetSize": "≈ 4–6 μm",
+                    "layer": "3.0–10.0",
+                    "synthesis": "Modified Hummers’ Method",
+                    "color": "Brown",
+                    "smell": "Odorless",
+                    "waterSolubility": "Soluble"
+                },
+                "elementalAnalysis": {
+                    "carbon": "Carbon: 50% < C < 70%",
+                    "oxygen": "Oxygen: 30% < O < 50%"
+                },
+                "specifications": {
+                    "electricalConductivity": "~ 100 S/m",
+                    "specificSurfaceArea": "100-300 m²/g",
+                    "purity": ">99%"
+                },
+                "applications": [
+                    "Supercapacitors",
+                    "Catalyst",
+                    "Biomaterials",
+                    "Tensile strength and Elasticity",
+                    "Membranes and coating"
+                ]
+            }
+        },
+        "pd_2": {
+            "pd_name": "Reduced Graphene Oxide Powder",
+            "pd_desc": "With high conductivity and enhanced stability. Engineered for advanced applications in electronics, energy storage, sensors, and high-performance composites, ensuring consistent quality and superior functionality.",
+            "highlight": "High conductivity, enhanced stability, engineered for advanced technology applications.",
+            "details": {
+                "highlight": "High conductivity, enhanced stability, engineered for advanced technology applications.",
+                "packagingSize": [
+                    "1 g",
+                    "100 g",
+                    "500 g",
+                    "1,000 g"
+                ],
+                "productSizeImage": [
+                    "/products/grbg_gray/1.png",
+                    "/products/grbg_gray/2.png",
+                    "/products/grbg_gray/3.png",
+                    "/products/grbg_gray/4.png"
+                ],
+                "properties": {
+                    "sheetSize": "≈ 4–6 μm",
+                    "layer": "3.0–10.0",
+                    "synthesis": "Modified Hummers’ Method",
+                    "color": "Black",
+                    "smell": "Odorless",
+                    "waterSolubility": "Insoluble"
+                },
+                "elementalAnalysis": {
+                    "carbon": "Carbon: C ≥ 70%",
+                    "oxygen": "Oxygen: O ≥ 30%"
+                },
+                "specifications": {
+                    "electricalConductivity": "~ 100–1,000 S/m",
+                    "specificSurfaceArea": "500–700 m²/g",
+                    "purity": ">99%"
+                },
+                "applications": [
+                    "Supercapacitors",
+                    "Catalyst",
+                    "Solar energy",
+                    "Semiconductor chips",
+                    "Conductive film",
+                    "Computer memory",
+                    "Biomaterials",
+                    "Transparent conductive coating"
+                ]
+            }
+        },
+        "pd_3": {
+            "pd_name": "Graphene Oxide Dispersion in H₂O",
+            "pd_desc": "High-purity dispersion ready for advanced applications in coatings, composites, energy storage, and research. Ensures uniform performance and superior processability.",
+            "highlight": "High conductivity, enhanced stability, engineered for advanced technology applications.",
+            "details": {
+                "highlight": "High conductivity, enhanced stability, engineered for advanced technology applications.",
+                "packagingSize": [
+                    "100 ml",
+                    "500 ml",
+                    "1,000 ml",
+                    "5,000 ml",
+                    "Concentration 8 mg/ml"
+                ],
+                "productSizeImage": [
+                    "/products/grbt_brown/1.png",
+                    "/products/grbt_brown/2.png",
+                    "/products/grbt_brown/3.png",
+                    "/products/grbt_brown/4.png"
+                ],
+                "properties": {
+                    "sheetSize": "≈ 4–6 μm",
+                    "layer": "3.0–10.0",
+                    "synthesis": "Modified Hummers’ Method",
+                    "color": "Brown",
+                    "smell": "Odorless",
+                    "waterSolubility": "Soluble"
+                },
+                "elementalAnalysis": {
+                    "carbon": "Carbon: 50 % < C < 70%",
+                    "oxygen": "Oxygen: 30 % < O < 50%"
+                },
+                "specifications": {
+                    "electricalConductivity": "~ 100 S/m",
+                    "specificSurfaceArea": "100–300 m²/g",
+                    "purity": ">99%"
+                },
+                "applications": [
+                    "Supercapacitors",
+                    "Catalyst",
+                    "Biomaterials",
+                    "Tensile strength and Elasticity",
+                    "Membranes and coating"
+                ]
+            }
+        },
+        "pd_4": {
+            "pd_name": "Reduced Graphene Oxide Dispersion in H₂O",
+            "pd_desc": "Highly conductive, stable dispersion engineered for advanced applications in electronics, energy storage, sensors, and high-performance composites. Ensures consistent quality and superior processability.",
+            "highlight": "High conductivity, enhanced stability, engineered for advanced technology applications.",
+            "details": {
+                "packagingSize": [
+                    "100 ml",
+                    "500 ml",
+                    "1,000 ml",
+                    "5,000 ml",
+                    "Concentration 2 mg/ml"
+                ],
+                "productSizeImage": [
+                    "/products/grbt_yellow/1.png",
+                    "/products/grbt_yellow/2.png",
+                    "/products/grbt_yellow/3.png",
+                    "/products/grbt_yellow/4.png"
+                ],
+                "properties": {
+                    "sheetSize": "≈ 4–6 μm",
+                    "layer": "3.0–10.0",
+                    "synthesis": "Modified Hummers’ Method",
+                    "color": "Black",
+                    "smell": "Odorless",
+                    "waterSolubility": "Insoluble"
+                },
+                "elementalAnalysis": {
+                    "carbon": "Carbon: C ≥ 70%",
+                    "oxygen": "Oxygen: O ≥ 30%"
+                },
+                "specifications": {
+                    "electricalConductivity": "~ 100–1,000 S/m",
+                    "specificSurfaceArea": "500–700 m²/g",
+                    "purity": ">99%"
+                },
+                "applications": [
+                    "Supercapacitors",
+                    "Catalyst",
+                    "Solar energy",
+                    "Semiconductor chips",
+                    "Conductive film",
+                    "Computer memory",
+                    "Biomaterials",
+                    "Transparent conductive coating"
+                ]
+            }
+        }
+    },
+    "innovation": {
+        "title_1": "Innovation with",
+        "title_2": "Graphene",
+        "inno_desc": "Explore the cutting-edge applications of graphene in modern industries — from coatings, EV tires, and smart fabrics, to advanced pipeline solutions.",
+        "section_1": {
+            "title": "COATING",
+            "detail": "Graphene plays a crucial role in coating applications due to its outstanding physical and chemical properties compared to conventional materials. It is used as an “Advanced Coating Material” to enhance durability, strength, and other special properties of various surfaces."
+        },
+        "section_2": {
+            "title": "EV TIRES",
+            "detail": "1. EV vehicles require tires with lower wear and higher range. Graphene helps reduce rolling resistance, improving efficiency.\n2. Using graphene as a filler or additive can make EV tires more sustainable compared to conventional materials.\n3. Manufacturers and researchers are increasingly interested in graphene. For example, Levidian collaborates with research organizations to test graphene in tire materials."
+        },
+        "section_3": {
+            "title": "FABRIC",
+            "detail": "Graphene has excellent thermal and electrical conductivity. When applied to fabrics, it helps distribute heat or regulate the wearer’s temperature. Projects like Graphene Flagship coat graphene layers onto textile fibers, producing conductive, lightweight, flexible, and breathable fabrics."
+        },
+        "section_4": {
+            "title": "PIPELINE",
+            "detail": "1. Industrial pipelines are exposed to high temperatures, pressure, and corrosive substances — graphene coatings improve durability and thermal conductivity.\n2. Companies like CUBSON use graphene-based powder coatings for oil and gas pipelines to enhance resistance to heat and chemicals."
+        },
+        "section_5": {
+            "title": "MILITARY",
+            "detail": "Armor and Protective Equipment\n 1.Personal Armor(Body Armor/ Helmets) Graphene coatings or inclusions to increase strength and impact resistance Weight reduction and improved mobility\n\n2.Vehicle Armor Graphene is incorporated into composite materials for armored vehicles to reduce weight while maintaining strength"
+        },
+        "section_6": {
+            "title": "CONCREAT",
+            "detail": "Graphene-reinforced concrete is one of the fastest-growing construction material innovations in recent years, as graphene can “enhance” concrete properties in several areas, including strength, water resistance, crack resistance, and durability."
+        },
+        "section_7": {
+            "title": "WIRE",
+            "detail": "“Graphene-based cable insulation” is another promising application in the electrical and electronic materials industry. This is because graphene can significantly enhance the strength, thermal conductivity, and resistance to degradation of insulation."
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "desc_1": "We pride ourselves not only on the quality of our materials, but also on the technical support and collaboration we offer to researchers, engineers, and industry professionals.",
+        "desc_2": "For more details about our products and services, visit our website or contact us directly. We are shaping the future of material science.",
+        "name": "Name",
+        "place_name": "Your Name",
+        "email": "E-mail",
+        "place_email": "exameple@mail.com",
+        "subject": "Subject",
+        "place_subject": "How can we help you?",
+        "message": "Message",
+        "place_message": "Write your message here...",
+        "btnsend": "Send message",
+        "company": "Company",
+        "pbr": "PBR CO., LTD."
+    },
+    "about":{
+        "about_us":"About PBR",
+        "details":"PBR is a leading developer of graphene a next-generation material poised to transform industries. We focus on the research and development of advanced manufacturing technologies that meet the evolving needs of diverse industrial applications, driving efficient and scalable real-world solutions.",
+        "section":{
+            "overview":{
+                "title":"Company Overview",
+                "detail":"PBR Co., Ltd. was established in 2023 to serve industrial sectors with innovative solutions in automation systems,machine design, and engineering consultation. The company also engages in the import and export of spare parts and mechanical equipment."
+            },
+            "research":{
+                "title":"Research & Development",
+                "detail":"Our research focuses on Graphene-based materials including Graphene Oxide (GO) and Reduced Graphene Oxide (rGO). This effort is led by Professor Dr. Pichatt Palanugoo, a leading expert in industrial nanotechnology. \n\nIn collaboration with Pisut Logistics Public Co., Ltd. and Thai Mechatronics Co., Ltd., PBR develops large-scale automated production systems and supports advanced industrial innovation in Thailand.",
+                "detail_1":"In collaboration with Pisut Logistics Public Co., Ltd. and Thai Mechatronics Co., Ltd., PBR develops large-scale automated production systems and supports advanced industrial innovation in Thailand."
+            },
+            "vision":{
+                "title":"Vision & Mission",
+                "detail":"We aim to be a leading producer of high-quality Graphene materialsthat are cost-effective, environmentally safe, and industrially scalable.\n\nOur mission is to create sustainable innovations that support Thailand’s transition to Industry 4.0 while promoting eco-friendly manufacturing and circular economy principles.",
+                "detail_1":"Our mission is to create sustainable innovations that support Thailand’s transition to Industry 4.0 while promoting eco-friendly manufacturing and circular economy principles."
+            }
+        }
+    },
+    "news": {
+        "title": "Latest News",
+        "btn":"Read more →",
+        "section": {
+            "section_1": {
+                "super": "Superior Corrosion Protection",
+                "detail": "Graphene coatings act as a strong barrier against moisture and oxygen, significantly reducing corrosion in oil and gas pipelines."
+            },
+            "section_2": {
+                "enhance": "Enhanced Durability and Thermal Resistance",
+                "detail": "With its exceptional strength and thermal conductivity, graphene improves the mechanical stability and heat tolerance of pipeline coatings."
+            },
+            "section_3": {
+                "future": "Future-Ready for Hydrogen Transport",
+                "detail": "Graphene-based layers can help prevent hydrogen embrittlement, making pipelines safer for next-generation hydrogen energy systems."
+            }
+        },
+        "business":{
+            "title":"PBRGROUP Business",
+            "group":{
+                "group_1":"Construction Materials and Concrete",
+                "group_2":"Polymers and Coatings",
+                "group_3":"Electrical and Energy",
+                "group_4":"Environment and Water",
+                "group_5":"Resources and Recycling",
+                "group_6":"Health and Sustainable Life Technologies"
+            }
+        },
+        "power":{
+            "title":"Power Your Business With Innovation",
+            "detail":"Delivering cutting-edge nanomaterial solutions for the future of industry.",
+            "btn":"Join Us"
+        },
+        "port":{
+            "port1":"The company's products and manufacturing processes are of high-quality standards, with a production capacity that can be continuously expanded each year to meet the growing market demand.",
+            "port2":"Our current production capacity is approximately 2 tons per year.",
+            "port3":"The company is well-prepared to scale up its production capacity in the future in order to meet the growing demands of an expanding industry.",
+            "port4":"Our team consists of highly skilled professionals with deep expertise and a passion for excellence.",
+            "port5":"We focus on the research and development of advanced manufacturing technologies that meet the evolving needs of diverse industrial applications."
+        }
+    },
+    "footer": {
+        "about": "About Us",
+        "about_com": "PBR Company Limited",
+        "pbr_address": "33 Mu 3, Surasak Sub-district, Si Racha District, Chonburi 20110 THAILAND.",
+        "aboutdetails_1": "We pride ourselves not only on the quality of our materials, but also on the technical support and collaboration we offer to researchers, engineers, and industry professionals.",
+        "aboutdetails_2": "For more details about our products and services, contacts us via",
+        "quicklink": "Quick Links",
+        "address": "Address",
+        "contact": "Contact Us",
+        "phone": "+66(0)86 3636 324",
+        "email": "pbr@pbr.co.th"
+    },
+    "button": {
+        "readmore": "Read More →",
+        "close":"Close",
+        "open":"Open"
+    }
+}

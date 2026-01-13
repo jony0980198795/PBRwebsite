@@ -2,43 +2,46 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-const products = [
-    {
-        src: "/products/grbg_brown/2.png",
-        title: "Graphene Oxide Powder",
-        details:
-            "High-purity Graphene Oxide Powder engineered for exceptional dispersion and surface activity. Ideal for advanced applications in composites, coatings, energy storage, and research development. Ensures consistent quality, scalability, and superior performance.",
-        link: "/product_prev",
-    },
-    {
-        src: "/products/grbg_gray/2.png",
-        title: "Reduced Graphene Oxide Powder",
-        details:
-            "With high conductivity and enhanced stability. Engineered for advanced applications in electronics, energy storage, sensors, and high-performance composites, ensuring consistent quality and superior functionality",
-        link: "/product_prev",
-    },
-    {
-        src: "/products/grbt_brown/2.png",
-        title: "Graphene Oxide Dispersion in H₂O",
-        details:
-            "High-purity dispersion ready for advanced applications in coatings, composites, energy storage, and research. Ensures uniform performance and superior processability",
-        link: "/product_prev",
-    },
-    {
-        src: "/products/grbt_yellow/2.png",
-        title: "Reduced Graphene Oxide Dispersion in H₂O",
-        details:
-            "Highly conductive, stable dispersion engineered for advanced applications in electronics, energy storage, sensors, and high-performance composites. Ensures consistent quality and superior processability",
-        link: "/product_prev",
-    },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ProductsSection() {
+    const { t } = useLanguage();
+
+    const products = [
+        {
+            src: "/products/grbg_brown/3.png",
+            title: t.home.our_product.product_1.pd_name,
+            details:
+                t.home.our_product.product_1.pd_detail,
+            link: "/product_prev",
+        },
+        {
+            src: "/products/grbg_gray/3.png",
+            title: t.home.our_product.product_2.pd_name,
+            details:
+                t.home.our_product.product_2.pd_detail,
+            link: "/product_prev",
+        },
+        {
+            src: "/products/grbt_brown/3.png",
+            title: t.home.our_product.product_3.pd_name,
+            details:
+                t.home.our_product.product_3.pd_detail,
+            link: "/product_prev",
+        },
+        {
+            src: "/products/grbt_yellow/3.png",
+            title: t.home.our_product.product_4.pd_name,
+            details:
+                t.home.our_product.product_4.pd_detail,
+            link: "/product_prev",
+        },
+    ];
+
     return (
         <section className="w-full max-w-6xl py-4 px-4 mx-auto">
             <div className="py-2 px-4">
-                <h2 className="text-3xl font-semibold text-center mb-10">Our Products</h2>
+                <h2 className="text-3xl font-semibold text-center mb-10">{t.home.our_product.our_pd_title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {products.map((item, i) => (
                         <motion.div
@@ -65,14 +68,19 @@ export default function ProductsSection() {
                                 />
                             </div>
                             {/* Content Section */}
-                            <div className="w-full md:w-1/2 p-4 flex flex-col justify-between">
-                                <div>
+                            <div className="w-full md:w-1/2 p-4 flex flex-col justify-items-center justify-between">
+                                <div className="">
                                     <p className="font-bold text-1xl text-gray-800 mb-2">{item.title}</p>
-                                    <p className="text-gray-600 text-sm mb-4">{item.details}</p>
+                                    <p className="text-gray-600 text-sm mb-4">{item.details.slice(0,100)}...</p>
                                 </div>
-                                <button className="px-6 py-2 mt-auto rounded-lg bg-black text-white text-sm hover:bg-gray-700 transition">
-                                    <Link href={item.link}>Read More →</Link>
-                                </button>
+                                <Link
+                                    href={item.link}
+                                    className="text-center inline-block px-6 py-2 mt-auto rounded-lg
+             bg-black text-white text-sm
+             hover:bg-gray-700 transition"
+                                >
+                                    Read More →
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

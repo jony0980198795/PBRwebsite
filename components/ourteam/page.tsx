@@ -1,5 +1,6 @@
 import { motion, useInView, easeOut, Variants } from "framer-motion";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 const teamVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
@@ -14,6 +15,8 @@ const teamVariants: Variants = {
 };
 
 export default function OurTeam() {
+    const {t}=useLanguage();
+
     return (
         <section className="w-full max-w-6xl py-12 px-6 mx-auto">
             <motion.div
@@ -22,27 +25,27 @@ export default function OurTeam() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
             >
-                <h2 className="text-3xl font-semibold text-center mb-12">OUR TEAM</h2>
+                <h2 className="text-3xl font-semibold text-center mb-12">{t.home.ourteam.ourteamtitle}</h2>
             </motion.div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
                 {[
                     {
                         src: "/leader/ceo.jpg",
-                        name: "Mr. Phornpisut Palanugoolsagul",
-                        position: "Co-Founder & CEO",
-                        details: "A logistics and supply chain expert.",
+                        name: t.home.ourteam.person_1.name,
+                        position: t.home.ourteam.person_1.position,
+                        details: t.home.ourteam.person_1.details,
                     },
                     {
                         src: "/leader/coo.jpg",
-                        name: "Mr. Kavee Rakngern",
-                        position: "Co-Founder & COO",
-                        details: "Specialist in Automation Systems & Graphene Production.",
+                        name: t.home.ourteam.person_2.name,
+                        position: t.home.ourteam.person_2.position,
+                        details: t.home.ourteam.person_2.details,
                     },
                     {
                         src: "/leader/senior.jpg",
-                        name: "Mr. Professor Dr. Pichatt Palanugool",
-                        position: "Senior Advisor",
-                        details: "Expert in Graphene Materials, nanotechnology innovations, and industrial applications.",
+                        name: t.home.ourteam.person_3.name,
+                        position: t.home.ourteam.person_3.position,
+                        details: t.home.ourteam.person_3.details,
                     },
                 ].map((member, index) => (
                     <motion.div

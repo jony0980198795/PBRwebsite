@@ -1,10 +1,14 @@
 "use client"
+
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image"; // ถ้าใช้ Next.js
 import { FaHistory, FaLightbulb, FaLeaf, FaGlobe, FaCheckCircle } from "react-icons/fa";
+import { useLanguage } from "@/context/LanguageContext";
 
 const AboutUs = () => {
+    const {t}=useLanguage();
+
     return (
         <main className="min-h-screen w-full bg-gradient-to-b from-white via-gray-50 to-gray-100">
             {/* Hero Section */}
@@ -29,7 +33,7 @@ const AboutUs = () => {
                         transition={{ duration: 0.8 }}
                         className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-xl mb-4"
                     >
-                        About{" "} PBR
+                        {t.about.about_us}
                     </motion.h1>
 
                     <motion.p
@@ -38,7 +42,7 @@ const AboutUs = () => {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="text-gray-100 md:text-lg leading-relaxed max-w-3xl"
                     >
-                        PBR is a leading developer of graphene a next-generation material poised to transform industries. We focus on the research and development of advanced manufacturing technologies that meet the evolving needs of diverse industrial applications, driving efficient and scalable real-world solutions.
+                        {t.about.details}
                     </motion.p>
                 </div>
             </section>
@@ -52,13 +56,10 @@ const AboutUs = () => {
                     className="bg-white/80 backdrop-blur-md p-4 shadow-lg"
                 >
                     <h2 className="text-3xl font-bold text-gray-900 border-l-4 border-blue-400 pl-4 mb-4">
-                        🏢 Company Overview
+                        🏢 {t.about.section.overview.title}
                     </h2>
                     <p className="leading-relaxed text-gray-700">
-                        PBR Co., Ltd. was established in <b>2023</b> to serve
-                        industrial sectors with innovative solutions in <b>automation systems</b>,
-                        <b>machine design</b>, and <b>engineering consultation</b>. The company also
-                        engages in the <b>import and export of spare parts and mechanical equipment</b>.
+                        {t.about.section.overview.detail}
                     </p>
                 </motion.div>
 
@@ -71,19 +72,13 @@ const AboutUs = () => {
                     className="bg-white/80 backdrop-blur-md p-10 shadow-lg"
                 >
                     <h2 className="text-3xl font-bold text-gray-900 border-l-4 border-teal-400 pl-4 mb-4">
-                        🔬 Research & Development
+                        🔬{t.about.section.research.title} 
                     </h2>
                     <p className="leading-relaxed text-gray-700 mb-3">
-                        Our research focuses on <b>Graphene-based materials</b> including Graphene Oxide (GO)
-                        and Reduced Graphene Oxide (rGO). This effort is led by{" "}
-                        <b>Professor Dr. Pichatt Palanugoo</b>, a leading expert in industrial
-                        nanotechnology.
+                        {t.about.section.research.detail}
                     </p>
                     <p className="leading-relaxed text-gray-700">
-                        In collaboration with <b>Pisut Logistics Public Co., Ltd.</b> and{" "}
-                        <b>Thai Mechatronics Co., Ltd.</b>, PBR develops
-                        large-scale automated production systems and supports
-                        advanced industrial innovation in Thailand.
+                        {t.about.section.research.detail_1}
                     </p>
                 </motion.div>
 
@@ -96,16 +91,13 @@ const AboutUs = () => {
                     className="bg-white/80 mb-6 backdrop-blur-md p-10 shadow-lg"
                 >
                     <h2 className="text-3xl font-bold text-gray-900 border-l-4 border-indigo-400 pl-4 mb-4">
-                        🌱 Vision & Mission
+                        🌱 {t.about.section.vision.title}
                     </h2>
                     <p className="leading-relaxed text-gray-700 mb-3">
-                        We aim to be a <b>leading producer of high-quality Graphene materials</b>
-                        that are cost-effective, environmentally safe, and industrially scalable.
+                        {t.about.section.vision.detail}
                     </p>
                     <p className="leading-relaxed text-gray-700">
-                        Our mission is to create sustainable innovations that support
-                        <b> Thailand’s transition to Industry 4.0</b> while promoting
-                        eco-friendly manufacturing and circular economy principles.
+                        {t.about.section.vision.detail_1}
                     </p>
                 </motion.div>
             </section>

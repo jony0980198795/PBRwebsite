@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function News() {
-    const {t} = useLanguage();
+    const { t } = useLanguage();
     const highlights = [
         {
             title: t.news.section.section_1.super,
@@ -203,29 +203,34 @@ export default function News() {
                     >
                         {t.news.power.detail}
                     </motion.p>
-
-                    <motion.button
-                        whileHover={{
-                            scale: 1.05,
-                            boxShadow: "0 0 25px rgba(37,99,235,0.6)",
-                        }}
-                        whileTap={{ scale: 0.98 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                        className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl 
-                               shadow-lg transition font-semibold"
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61586373485649"
+                        target="_blank"
+                        className="cursor-pointer"
                     >
-                        {t.news.power.btn}
-                    </motion.button>
+                        <motion.button
+                            whileHover={{
+                                scale: 1.05,
+                                boxShadow: "0 0 25px rgba(37,99,235,0.6)",
+                            }}
+                            whileTap={{ scale: 0.98 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl 
+                               shadow-lg transition font-semibold"
+                        >
+                            {t.news.power.btn}
+                        </motion.button>
+                    </a>
                 </motion.div>
             </section>
             {/* Stats */}
-            <HighlightsSection/>
+            <HighlightsSection />
         </main>
     )
 }
 
 function HighlightsSection() {
-    const {t} = useLanguage();
+    const { t } = useLanguage();
 
     const cards = [
         {
@@ -261,12 +266,12 @@ function HighlightsSection() {
     ];
 
     return (
-        <section className="relative mt-12 bg-gradient-to-b from-gray-100 to-white py-20 px-6">
-            <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-10 text-center">
+        <section className="relative mt-12 bg-gradient-to-b from-gray-100 to-white py-20 px-4">
+            <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
                 {cards.map((card, i) => (
                     <motion.div
                         key={i}
-                        className="group bg-white shadow-md p-6 rounded-bl-3xl hover:shadow-xl 
+                        className="group bg-white shadow-md p-2 rounded-bl-3xl hover:shadow-xl 
                                    transition-all duration-500 cursor-pointer"
                         initial={{ opacity: 0, y: 50, scale: 0.95 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -290,7 +295,7 @@ function HighlightsSection() {
                                 {card.icon}
                             </motion.div>
                             <p className="text-3xl font-extrabold text-green-900">{card.value}</p>
-                            <p className="font-bold mt-1 leading-relaxed text-[12px] text-gray-700">
+                            <p className="font-bold mt-1 leading-relaxed text-[16px] text-gray-700">
                                 {card.text}
                             </p>
                         </div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import {Phone, Mail, Facebook} from "lucide-react";
+import { FaWeixin, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const {t}=useLanguage();
@@ -52,7 +53,15 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-2">
             <Facebook size={16}/>
-            <a href="https://www.facebook.com/profile.php?id=61586373485649">Facebook</a>
+            <a href="https://www.facebook.com/profile.php?id=61586373485649">PBR Graphene Materials</a>
+          </div>
+          <div className="flex items-center gap-2">
+            <FaWeixin size={16}/>
+            <p>WhatApp</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <FaWhatsapp size={16}/>
+            <p>WeChat</p>
           </div>
           <div>
             <Image

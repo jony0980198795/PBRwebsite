@@ -68,7 +68,7 @@ export default function ProductsSection() {
                                 />
                             </div>
                             {/* Content Section */}
-                            <div className="w-full md:w-1/2 p-4 flex flex-col justify-items-center justify-between">
+                            <div className="w-full md:w-1/2 p-4 flex flex-col">
                                 <div className="">
                                     <p className="font-bold text-1xl text-gray-800 mb-2">{item.title}</p>
                                     <p className="text-gray-600 text-sm mb-4">{item.details.slice(0,100)}...</p>

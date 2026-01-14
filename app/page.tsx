@@ -89,7 +89,9 @@ export default function Home() {
           ))}
         </div>
       </section>
-
+      {/* <section>
+        <h2 className="text-3xl font-semibold text-center mb-10">Our Partners</h2>
+      </section> */}
       {/* Preview Section */}
       <ProductSection />
 

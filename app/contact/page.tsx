@@ -2,6 +2,8 @@
 
 import { FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
+import { FaWeixin, FaWhatsapp } from "react-icons/fa";
+import { Facebook } from "lucide-react";
 
 export default function Contact() {
     const {t}=useLanguage();
@@ -38,7 +40,6 @@ export default function Contact() {
                                         />
                                     </div>
                                 </div>
-
                                 {/* Email Input */}
                                 <div className="group space-y-2">
                                     <label className="text-sm font-semibold text-slate-600 ml-1 group-focus-within:text-blue-600 transition-colors">
@@ -53,7 +54,6 @@ export default function Contact() {
                                     </div>
                                 </div>
                             </div>
-
                             {/* Subject Input */}
                             <div className="group space-y-2">
                                 <label className="text-sm font-semibold text-slate-600 ml-1 group-focus-within:text-blue-600 transition-colors">
@@ -65,7 +65,6 @@ export default function Contact() {
                                     className="w-full border border-slate-200 p-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all bg-white/70 backdrop-blur-sm shadow-sm placeholder:text-slate-400"
                                 />
                             </div>
-
                             {/* Message Input */}
                             <div className="group space-y-2">
                                 <label className="text-sm font-semibold text-slate-600 ml-1 group-focus-within:text-blue-600 transition-colors">
@@ -76,7 +75,6 @@ export default function Contact() {
                                     placeholder={t.contact.place_message}
                                 ></textarea>
                             </div>
-
                             {/* 🔹 Submit Button กับ Gradient และ Animation */}
                             <div className="flex justify-end pt-4">
                                 <button className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-10 py-4 rounded-2xl transition-all active:scale-95 shadow-xl shadow-blue-500/30 flex items-center gap-3 group">
@@ -90,7 +88,6 @@ export default function Contact() {
                             </div>
                         </form>
                     </div>
-
                     {/* Contact Block */}
                     <div className="p-6 rounded-xl bg-white shadow hover:shadow-lg transition space-y-4">
                         <h3 className="font-semibold text-gray-800 mb-2 text-lg">{t.contact.company}</h3>
@@ -98,25 +95,26 @@ export default function Contact() {
                         <div className="flex items-center gap-3 text-gray-700">
                             <FaPhone className="text-blue-600" /> +66 (0)86 3636 324
                         </div>
-
                         <div className="flex items-center gap-3 text-gray-700">
                             <FaEnvelope className="text-blue-600" /> pbr@pbr.co.th
                         </div>
-
+                        <div className="flex items-center gap-3 text-gray-700">
+                            <Facebook size={16} className="text-blue-600"/>
+                            <a href="https://www.facebook.com/profile.php?id=61586373485649">PBR Graphene Materials</a>
+                        </div>
                         <a href="https://www.pbr.co.th" target="_blank"
                             className="flex items-center gap-3 text-blue-600 hover:underline">
-                            <FaGlobe /> www.pbr.co.th
+                            <FaGlobe /> 
+                            <p className="text-black text-gray-700">www.pbr.co.th</p>
                         </a>
-
-                        {/* <a href="https://www.google.com/maps/@13.137469,100.9163066,3a,75y,95.29h,87.44t/data=!3m7!1e1!3m5!1se6ayysBv2d9OCYRBi6wZgA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D2.562630936478442%26panoid%3De6ayysBv2d9OCYRBi6wZgA%26yaw%3D95.29058078327333!7i16384!8i8192?hl=th&entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank"
-                            className="flex items-center gap-3 text-blue-600 hover:underline">
-                            <FaMapMarkerAlt /> Google Map Location
-                        </a> */}
-                        {/* <p className="text-gray-600 mt-2 text-sm">
-                            33 Mu 3, Surasak Sub-district,<br />
-                            Si Racha District, Chonburi 20110<br />
-                            THAILAND
-                        </p> */}
+                        <div className="flex items-center gap-3 text-gray-700">
+                            <FaWeixin className="text-blue-600" size={20}/>
+                            <p className="text-gray-700">WeChat</p>
+                        </div>
+                        <div className="flex item-center gap-3 text-gray-700">
+                            <FaWhatsapp className="text-blue-600" size={20}/>
+                            <p className="text-gray-700">WhatApp</p>
+                        </div>
                     </div>
                 </div>
             </div>

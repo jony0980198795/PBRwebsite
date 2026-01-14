@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { Mail, Phone, Facebook } from "lucide-react";
+import { FaWeixin, FaWhatsapp } from "react-icons/fa";
 
 export default function Header() {
   const [showHeader, setShowHeader] = useState(true);
@@ -114,7 +115,6 @@ export default function Header() {
   );
 }
 
-
 function LanguageSwitcher() {
   const { lang, switchLanguage } = useLanguage();
 
@@ -170,6 +170,14 @@ function FloatingContactButton() {
             <div className="flex items-center gap-3 text-sm">
               <Facebook size={16} />
               <p>PBR Graphene Materials</p>
+            </div>
+            <div className="flex items-center gap-3 text-sm">
+              <FaWeixin size={16} />
+              <p>WeChat</p>
+            </div>
+            <div className="flex items-center gap-3 text-sm">
+              <FaWhatsapp size={16} />
+              <p>WhatApp</p>
             </div>
           </motion.div>
         )}

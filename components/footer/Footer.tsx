@@ -3,11 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import {Phone, Mail, Facebook} from "lucide-react";
-import { FaWeixin, FaWhatsapp } from "react-icons/fa";
+import { Phone, Mail, Facebook, MapPin } from "lucide-react";
 
 export default function Footer() {
-  const {t}=useLanguage();
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-gray-900 text-gray-300 px-8 py-10 mt-10">
@@ -35,8 +34,12 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">{t.footer.about}</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/partner">{t.footer.about_com}</Link></li>
-            <p>{t.footer.pbr_address}</p>
+            <div className="flex">
+              <Link href="/partner">{t.footer.about_com}</Link>
+            </div>
+            <div className="flex">
+              <p>{t.footer.pbr_address}</p>
+            </div>
           </ul>
         </div>
 
@@ -44,25 +47,25 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">{t.nav.contact}</h3>
           <div className="flex item-center gap-2">
-            <Phone size={16}/>
+            <Phone size={16} />
             <p>{t.footer.phone}</p>
           </div>
           <div className="flex items-center gap-2">
-            <Mail size={16}/>
+            <Mail size={16} />
             <p className="text-sm">{t.footer.email}</p>
           </div>
           <div className="flex items-center gap-2">
-            <Facebook size={16}/>
+            <Facebook size={16} />
             <a href="https://www.facebook.com/profile.php?id=61586373485649">PBR Graphene Materials</a>
           </div>
-          <div className="flex items-center gap-2">
+          {/*           <div className="flex items-center gap-2">
             <FaWeixin size={16}/>
             <p>WhatApp</p>
           </div>
           <div className="flex items-center gap-2">
             <FaWhatsapp size={16}/>
             <p>WeChat</p>
-          </div>
+          </div> */}
           <div>
             <Image
               src="/about/dbd.png"
@@ -86,8 +89,18 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-gray-700 mt-8 pt-4 text-center text-xs text-gray-500">
-       Copyright 2025 © PBR Company Limited
+        Copyright 2025 © PBR Company Limited
       </div>
     </footer>
   );
+}
+
+function MapSection(){
+  return (
+    <div>
+      <iframe
+        src=""
+      />
+    </div>
+  )
 }

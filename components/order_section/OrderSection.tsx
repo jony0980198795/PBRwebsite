@@ -19,7 +19,7 @@ export default function OrderSection({ product, setMainImage }: OrderSectionProp
     const currentSizes = product.details.packagingSize || [];
     const selectedSizeText = currentSizes[selectedIndex];
 
-    const mailtoUrl = `mailto:pbr@pbrautomation.co.th?subject=Order Inquiry: ${product.name}&body=${encodeURIComponent(
+    const mailtoUrl = `mailto:pbr@pbr.co.th?subject=Order Inquiry: ${product.name}&body=${encodeURIComponent(
         `I am interested in ordering:\n\nProduct: ${product.name}\nSize: ${selectedSizeText}\n\nPlease provide pricing details.`
     )}`;
 

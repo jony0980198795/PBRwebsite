@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react";
 import { FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaWeixin, FaWhatsapp } from "react-icons/fa";
@@ -7,7 +8,25 @@ import { Facebook } from "lucide-react";
 
 export default function Contact() {
     const {t}=useLanguage();
+    const [formData, setFormData]=useState({
+        name:"",
+        email:"",
+        subject:"",
+        message:""
+    })
+    const handleSubmit = (e:React.FormEvent)=>{
+        e.preventDefault();
+        const recipient="pbr@pbr.co.th"
+        const subject=encodeURIComponent(`Contact Inquiry: ${formData.subject}`);
+        const bodyText=`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+        const body=encodeURIComponent(bodyText);
 
+        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    }
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
     return (
         <section className="bg-gradient-to-br from-gray-50 to-white py-16 px-6">
             <div className="max-w-4xl mt-8 mx-auto text-center">
@@ -24,8 +43,8 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-6 text-left">
                     {/* Company Block */}
                     <div className="p-6 rounded-xl bg-white shadow hover:shadow-lg transition">
-                        <form action="" className="space-y-6">
-                            {/* 🔹 Container Group สำหรับ Name & Email */}
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            {/* Container Group สำหรับ Name & Email */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {/* Name Input */}
                                 <div className="group space-y-2">
@@ -34,6 +53,9 @@ export default function Contact() {
                                     </label>
                                     <div className="relative">
                                         <input
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
                                             type="text"
                                             placeholder={t.contact.place_name}
                                             className="w-full border border-slate-200 p-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all bg-white/70 backdrop-blur-sm shadow-sm placeholder:text-slate-400"
@@ -47,6 +69,9 @@ export default function Contact() {
                                     </label>
                                     <div className="relative">
                                         <input
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
                                             type="email"
                                             placeholder={t.contact.place_email}
                                             className="w-full border border-slate-200 p-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all bg-white/70 backdrop-blur-sm shadow-sm placeholder:text-slate-400"
@@ -60,6 +85,10 @@ export default function Contact() {
                                     {t.contact.subject}
                                 </label>
                                 <input
+                                    name="subject"
+                                    value={formData.subject}
+                                    onChange={handleChange}
+                                    required
                                     type="text"
                                     placeholder={t.contact.place_subject}
                                     className="w-full border border-slate-200 p-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all bg-white/70 backdrop-blur-sm shadow-sm placeholder:text-slate-400"
@@ -71,13 +100,19 @@ export default function Contact() {
                                     {t.contact.message}
                                 </label>
                                 <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
                                     className="w-full border border-slate-200 p-4 rounded-2xl h-40 focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all bg-white/70 backdrop-blur-sm shadow-sm placeholder:text-slate-400 resize-none"
                                     placeholder={t.contact.place_message}
                                 ></textarea>
                             </div>
-                            {/* 🔹 Submit Button กับ Gradient และ Animation */}
+                            {/* Submit Button กับ Gradient และ Animation */}
                             <div className="flex justify-end pt-4">
-                                <button className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-10 py-4 rounded-2xl transition-all active:scale-95 shadow-xl shadow-blue-500/30 flex items-center gap-3 group">
+                                <button 
+                                    type="submit"
+                                    className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-10 py-4 rounded-2xl transition-all active:scale-95 shadow-xl shadow-blue-500/30 flex items-center gap-3 group">
                                     <span className="relative z-10">{t.contact.btnsend}</span>
                                     <svg className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

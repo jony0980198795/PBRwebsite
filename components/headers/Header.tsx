@@ -106,7 +106,6 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-
           </motion.div>
         )}
       </AnimatePresence>
@@ -171,14 +170,14 @@ function FloatingContactButton() {
               <Facebook size={16} />
               <p>PBR Graphene Materials</p>
             </div>
-            <div className="flex items-center gap-3 text-sm">
+            {/* <div className="flex items-center gap-3 text-sm">
               <FaWeixin size={16} />
               <p>WeChat</p>
             </div>
             <div className="flex items-center gap-3 text-sm">
               <FaWhatsapp size={16} />
               <p>WhatApp</p>
-            </div>
+            </div> */}
           </motion.div>
         )}
       </AnimatePresence>

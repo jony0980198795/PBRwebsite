@@ -1,8 +1,18 @@
-"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { Metadata } from "next";
+
+export const metadata: Metadata={
+    title:"Graphene Products | PBR - นวัตกรรมวัสดุกราฟีน",
+    description:"เลือกชมผลิตภัณฑ์จากวัสดุกราฟีน (Graphene) คุณภาพสูงจาก PBR ทั้งสารเคลือบพื้นผิว เเละวัสดุอุตสาหกรรมที่ช่วยเพิ่มความทนทาน",
+    openGraph:{
+        title:"Graphene Products | PBR",
+        description:"นวัตกรรมวัสดุกราฟีนเพื่ออุตสาหกรรม",
+        images:["/products/grbg_brown/3.png"]
+    }
+}
 
 export default function ProductsSection() {
     const { t } = useLanguage();

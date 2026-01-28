@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { Sarabun, Inter } from "next/font/google"; // นำเข้าฟ้อนต์ Sarabun และ Inter
 import Header from "../components/headers/Header";
 import Footer from "../components/footer/Footer";
+import { SEO_CONFIG } from "@/src/config/seo";
 import "./globals.css";
 
 // ตั้งค่าฟ้อนต์ภาษาไทย (Sarabun)

@@ -1,12 +1,9 @@
-"use client"
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 const AboutUs = () => {
     const { t } = useLanguage();
-
     return (
         <main className="min-h-screen w-full bg-gradient-to-b from-white via-gray-50 to-gray-100">
             {/* Hero Section */}
@@ -19,10 +16,8 @@ const AboutUs = () => {
                     className="object-cover"
                     priority
                 />
-
                 {/* 🔹 Overlay gradient เพื่อให้ข้อความอ่านง่าย */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-
                 {/* 🔹 ข้อความ Overlay */}
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
                     <motion.h1
@@ -54,7 +49,6 @@ const AboutUs = () => {
                     className="bg-white/80 backdrop-blur-md p-4 md:p-8 lg:p-12 shadow-lg rounded-2xl"
                 >
                     <div className="flex flex-col lg:flex-row items-center gap-8">
-
                         {/* Image */}
                         <div className="w-full lg:w-1/2">
                             <img
@@ -63,7 +57,6 @@ const AboutUs = () => {
                                 className="w-full h-auto rounded-xl object-cover"
                             />
                         </div>
-
                         {/* Content */}
                         <div className="w-full lg:w-1/2 px-2 md:px-6 lg:px-0">
                             <h2
@@ -79,7 +72,6 @@ const AboutUs = () => {
 
                     </div>
                 </motion.div>
-
                 {/* R&D Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

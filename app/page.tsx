@@ -15,7 +15,7 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const {t}=useLanguage();
+  const { t } = useLanguage();
   return (
     <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-white to-gray-100">
       {/* Hero Section */}
@@ -30,7 +30,6 @@ export default function Home() {
           className="w-full h-full object-cover"
         />
         {/* Overlay (optional) */}
-
         <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center px-6">
           <motion.h1
             initial={{ y: 50, opacity: 0 }}
@@ -40,7 +39,6 @@ export default function Home() {
           >
             {t.home.title}
           </motion.h1>
-
           <motion.p
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -49,7 +47,6 @@ export default function Home() {
           >
             {t.home.title_1}
           </motion.p>
-
           <motion.p
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -66,9 +63,9 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { icon: <FaHistory className="text-4xl text-black-600 mb-4" />, title: t.home.our_history.our_his, link: "/about_us", detail: t.home.our_history.our_detail },
-            { icon: <FaLightbulb className="text-4xl text-black-500 mb-4" />, title: t.home.innovation.innov, link: "/innovation", detail: t.home.innovation.innov_detail},
+            { icon: <FaLightbulb className="text-4xl text-black-500 mb-4" />, title: t.home.innovation.innov, link: "/innovation", detail: t.home.innovation.innov_detail },
             { icon: <FaLeaf className="text-4xl text-black-500 mb-4" />, title: t.home.sustainability.sustain, link: "/", detail: t.home.sustainability.sustain_detail },
-            { icon: <FaGlobe className="text-4xl text-black-500 mb-4" />, title: t.home.global.global , link: "/news", detail:  t.home.global.global_detail },
+            { icon: <FaGlobe className="text-4xl text-black-500 mb-4" />, title: t.home.global.global, link: "/news", detail: t.home.global.global_detail },
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -89,9 +86,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      {/* <section>
-        <h2 className="text-3xl font-semibold text-center mb-10">Our Partners</h2>
-      </section> */}
+
       {/* Preview Section */}
       <ProductSection />
 

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext"; 
-import Image from "next/image";
 
 export default function Products() {
     const { t } = useLanguage(); // 2. ดึงตัวแปร t (คำแปล) มาใช้งาน

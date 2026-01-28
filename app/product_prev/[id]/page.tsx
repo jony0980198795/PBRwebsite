@@ -2,12 +2,19 @@ import { products } from "../data";
 import { notFound } from "next/navigation";
 import ProductDetailClient from "@/components/product_detail_client/ProductDetailClient";
 import TechnicalSpecsClient from "@/components/TechnicalSpecsClient"; // สร้างใหม่
+import { SEO_CONFIG } from "@/src/config/seo";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   return products.map((product)=>({
     id: product.id.toString(),
   }))
 }
+
+export const metadata: Metadata = {
+  title: SEO_CONFIG.products.title,
+  description: SEO_CONFIG.products.description,
+};
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

@@ -130,6 +130,7 @@
                 ],
                 "properties": {
                     "sheetSize": "≈ 4–6 μm",
+                    "particleSize":"300-800nm",
                     "layer": "3.0–10.0",
                     "synthesis": "Modified Hummers’ Method",
                     "color": "Brown",
@@ -174,6 +175,7 @@
                 ],
                 "properties": {
                     "sheetSize": "≈ 4–6 μm",
+                    "particle_size":"300-800nm",
                     "layer": "3.0–10.0",
                     "synthesis": "Modified Hummers’ Method",
                     "color": "Black",
@@ -222,6 +224,7 @@
                 ],
                 "properties": {
                     "sheetSize": "≈ 4–6 μm",
+                    "particle_size":"300-800nm",
                     "layer": "3.0–10.0",
                     "synthesis": "Modified Hummers’ Method",
                     "color": "Brown",
@@ -266,6 +269,7 @@
                 ],
                 "properties": {
                     "sheetSize": "≈ 4–6 μm",
+                    "particle_size":"300-800nm",
                     "layer": "3.0–10.0",
                     "synthesis": "Modified Hummers’ Method",
                     "color": "Black",
@@ -353,7 +357,7 @@
             },
             "research":{
                 "title":"Research & Development",
-                "detail":"Our research focuses on Graphene-based materials including Graphene Oxide (GO) and Reduced Graphene Oxide (rGO). This effort is led by Professor Dr. Pichatt Palanugoo, a leading expert in industrial nanotechnology. \n\nIn collaboration with Pisut Logistics Public Co., Ltd. and Thai Mechatronics Co., Ltd., PBR develops large-scale automated production systems and supports advanced industrial innovation in Thailand.",
+                "detail":"Our research focuses on Graphene-based materials including Graphene Oxide (GO) and Reduced Graphene Oxide (rGO). This effort is led by Professor Dr. Pichatt Palanugoo, a leading expert in industrial nanotechnology. \n\nIn collaboration with Pisut Logistics Public Co., Ltd. and TMC ThaiMechatronics Co., Ltd., PBR develops large-scale automated production systems and supports advanced industrial innovation in Thailand.",
                 "detail_1":"In collaboration with Pisut Logistics Public Co., Ltd. and Thai Mechatronics Co., Ltd., PBR develops large-scale automated production systems and supports advanced industrial innovation in Thailand."
             },
             "vision":{

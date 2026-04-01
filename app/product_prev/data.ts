@@ -10,6 +10,7 @@ export interface Product {
         productSizeImage: string[];
         properties: {
             sheetSize: string;
+            particle_size:string;
             layer: string;
             synthesis: string;
             color: string;
@@ -53,6 +54,7 @@ export const products:Product[]=[
             ],
             properties: {
                 sheetSize: "≈ 4–6 μm",
+                particle_size:"300-800nm",
                 layer: "3.0–10.0",
                 synthesis: "Modified Hummers’ Method",
                 color: "Brown",
@@ -105,6 +107,7 @@ export const products:Product[]=[
             ],
             properties: {
                 sheetSize: "≈ 4–6 μm",
+                particle_size:"300-800nm",
                 layer: "3.0–10.0",
                 synthesis: "Modified Hummers’ Method",
                 color: "Black",
@@ -159,6 +162,7 @@ export const products:Product[]=[
             ],
             properties: {
                 sheetSize: "≈ 4–6 μm",
+                particle_size:"300-800nm",
                 layer: "3.0–10.0",
                 synthesis: "Modified Hummers’ Method",
                 color: "Brown",
@@ -210,6 +214,7 @@ export const products:Product[]=[
             ],
             properties: {
                 sheetSize: "≈ 4–6 μm",
+                particle_size:"300-800nm",
                 layer: "3.0–10.0",
                 synthesis: "Modified Hummers’ Method",
                 color: "Black",

@@ -2,7 +2,7 @@
 
 import { FaHistory, FaLightbulb, FaLeaf, FaGlobe } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import HeroSlide from "@/components/home/page";
 import Link from "next/link";
 import OurTeam from "@/components/ourteam/page";
@@ -16,6 +16,7 @@ export default function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const { t } = useLanguage();
+
   return (
     <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-white to-gray-100">
       {/* Hero Section */}

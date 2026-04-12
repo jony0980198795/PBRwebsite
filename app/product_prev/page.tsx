@@ -5,19 +5,15 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext"; 
 
 export default function Products() {
-    const { t } = useLanguage(); // 2. ดึงตัวแปร t (คำแปล) มาใช้งาน
-
-    // 3. เตรียมข้อมูลสินค้าจาก Dictionary
+    const { t } = useLanguage();
     const productItems = [
-        { id: "pd_1", image: "/products/grbg_brown/2.png" }, // ใส่ path รูปภาพให้ตรงกับโปรเจกต์
+        { id: "pd_1", image: "/products/grbg_brown/2.png" }, 
         { id: "pd_2", image: "/products/grbg_gray/2.png" },
         { id: "pd_3", image: "/products/grbt_brown/3.png" },
         { id: "pd_4", image: "/products/grbt_yellow/3.png" },
     ];
-
     return (
         <main className="flex flex-col items-center bg-gradient-to-br from-gray-50 via-white to-gray-100 pt-28 pb-20">
-            {/* Title - ดึงจาก Dictionary */}
             <motion.h2
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -39,9 +35,7 @@ export default function Products() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
                 {productItems.map((item) => {
-                    // ดึงข้อมูลชื่อและรายละเอียดจาก Dictionary ตาม ID
                     const pdInfo = t.products[item.id]; 
-                    
                     return (
                         <motion.div
                             key={item.id}

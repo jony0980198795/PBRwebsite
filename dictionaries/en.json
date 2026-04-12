@@ -129,21 +129,22 @@
                     "/products/grbg_brown/4.png"
                 ],
                 "properties": {
-                    "sheetSize": "≈ 4–6 μm",
-                    "particleSize":"300-800nm",
-                    "layer": "3.0–10.0",
-                    "synthesis": "Modified Hummers’ Method",
+                    "sheetSize": "≈ 4 – 6 μm",
+                    "particleSize":"300 - 500 nm",
+                    "layer": "3.0 – 5.0",
+                    "thickness":"0.6 - 1.8 nm",
+                    "synthesis": "Modified Hummers Method",
                     "color": "Brown",
                     "smell": "Odorless",
                     "waterSolubility": "Soluble"
                 },
                 "elementalAnalysis": {
-                    "carbon": "Carbon: 50% < C < 70%",
-                    "oxygen": "Oxygen: 30% < O < 50%"
+                    "carbon": "Carbon: < 60.0 - 80.0%",
+                    "oxygen": "Oxygen: 20.0 - 35.0%"
                 },
                 "specifications": {
                     "electricalConductivity": "~ 100 S/m",
-                    "specificSurfaceArea": "100-300 m²/g",
+                    "specificSurfaceArea": "100 - 300 m²/g",
                     "purity": ">99%"
                 },
                 "applications": [
@@ -153,7 +154,9 @@
                     "Tensile strength and Elasticity",
                     "Membranes and coating"
                 ]
-            }
+            },
+            "file_path":"/files/cer_go.pdf",
+            "file_name":"Certificate_of_analysis_Go.pdf"
         },
         "pd_2": {
             "pd_name": "Reduced Graphene Oxide Powder",
@@ -174,21 +177,22 @@
                     "/products/grbg_gray/4.png"
                 ],
                 "properties": {
-                    "sheetSize": "≈ 4–6 μm",
-                    "particle_size":"300-800nm",
-                    "layer": "3.0–10.0",
-                    "synthesis": "Modified Hummers’ Method",
+                    "sheetSize": "≈ 4 – 6 μm",
+                    "particleSize":"300 - 500 nm",
+                    "layer": "3.0 – 5.0",
+                    "thickness":"0.6 - 1.8 nm",
+                    "synthesis": "Modified Hummers Method",
                     "color": "Black",
                     "smell": "Odorless",
                     "waterSolubility": "Insoluble"
                 },
                 "elementalAnalysis": {
-                    "carbon": "Carbon: C ≥ 70%",
-                    "oxygen": "Oxygen: O ≥ 30%"
+                    "carbon": "Carbon: ≥ 82%",
+                    "oxygen": "Oxygen: ≤ 18%"
                 },
                 "specifications": {
-                    "electricalConductivity": "~ 100–1,000 S/m",
-                    "specificSurfaceArea": "500–700 m²/g",
+                    "electricalConductivity": "~ 100 – 1,000 S/m",
+                    "specificSurfaceArea": "500 – 700 m²/g",
                     "purity": ">99%"
                 },
                 "applications": [
@@ -201,7 +205,9 @@
                     "Biomaterials",
                     "Transparent conductive coating"
                 ]
-            }
+            },
+            "file_path":"/files/cer_rgo.pdf",
+            "file_name":"Certificate_of_analysis_rGo.pdf"
         },
         "pd_3": {
             "pd_name": "Graphene Oxide Dispersion in H₂O",
@@ -223,21 +229,22 @@
                     "/products/grbt_brown/4.png"
                 ],
                 "properties": {
-                    "sheetSize": "≈ 4–6 μm",
-                    "particle_size":"300-800nm",
-                    "layer": "3.0–10.0",
-                    "synthesis": "Modified Hummers’ Method",
+                    "sheetSize": "≈ 4 – 6 μm",
+                    "particleSize":"300 - 800 nm",
+                    "layer": "3.0 – 5.0",
+                    "thickness":"0.6 - 1.8 nm",
+                    "synthesis": "Modified Hummers Method",
                     "color": "Brown",
                     "smell": "Odorless",
                     "waterSolubility": "Soluble"
                 },
                 "elementalAnalysis": {
-                    "carbon": "Carbon: 50 % < C < 70%",
-                    "oxygen": "Oxygen: 30 % < O < 50%"
+                    "carbon": "Carbon: < 60.0 - 80.0%",
+                    "oxygen": "Oxygen: 20.0 - 35.0%"
                 },
                 "specifications": {
                     "electricalConductivity": "~ 100 S/m",
-                    "specificSurfaceArea": "100–300 m²/g",
+                    "specificSurfaceArea": "100 – 300 m²/g",
                     "purity": ">99%"
                 },
                 "applications": [
@@ -247,7 +254,9 @@
                     "Tensile strength and Elasticity",
                     "Membranes and coating"
                 ]
-            }
+            },
+            "file_path":"/files/cer_go.pdf",
+            "file_name":"Certificate_of_analysis_Go.pdf"
         },
         "pd_4": {
             "pd_name": "Reduced Graphene Oxide Dispersion in H₂O",
@@ -268,21 +277,22 @@
                     "/products/grbt_yellow/4.png"
                 ],
                 "properties": {
-                    "sheetSize": "≈ 4–6 μm",
-                    "particle_size":"300-800nm",
-                    "layer": "3.0–10.0",
-                    "synthesis": "Modified Hummers’ Method",
+                    "sheetSize": "≈ 4 – 6 μm",
+                    "particle_size":"300 - 500 nm",
+                    "layer": "3.0 – 5.0",
+                    "thickness":"0.6 - 1.8 nm",
+                    "synthesis": "Modified Hummers Method",
                     "color": "Black",
                     "smell": "Odorless",
                     "waterSolubility": "Insoluble"
                 },
                 "elementalAnalysis": {
-                    "carbon": "Carbon: C ≥ 70%",
-                    "oxygen": "Oxygen: O ≥ 30%"
+                    "carbon": "Carbon: ≥ 82%",
+                    "oxygen": "Oxygen: ≤ 18%"
                 },
                 "specifications": {
-                    "electricalConductivity": "~ 100–1,000 S/m",
-                    "specificSurfaceArea": "500–700 m²/g",
+                    "electricalConductivity": "~ 100 – 1,000 S/m",
+                    "specificSurfaceArea": "500 – 700 m²/g",
                     "purity": ">99%"
                 },
                 "applications": [
@@ -295,7 +305,9 @@
                     "Biomaterials",
                     "Transparent conductive coating"
                 ]
-            }
+            },
+            "file_path":"/files/cer_rgo.pdf",
+            "file_name":"Certificate_of_analysis_rGo.pdf"
         }
     },
     "innovation": {
@@ -408,6 +420,24 @@
             "port5":"We focus on the research and development of advanced manufacturing technologies that meet the evolving needs of diverse industrial applications."
         }
     },
+    "news_conference":{
+        "title":"VN Graphene Global and PBR Co., Ltd. participated in the Nanotechnology Materials Science & Graphene Conference.",
+        "detail":"An important international platform for nanotechnology innovation. Our team exchanged knowledge with experts worldwide, gaining insights into the latest industrial applications.",
+        "props":{
+            "title":"Featured Products",
+            "prop_1":"Graphene Oxide (GO) Powder",
+            "prop_2":"Graphene Oxide (GO) Dispersion in H₂O",
+            "prop_3":"Reduced Graphene Oxide (rGO) Powder",
+            "prop_4":"Reduced Graphene Oxide (rGO) Dispersion in H₂O"
+        },
+        "benefit":{
+            "title":"We also showcased graphene applications in research and industry, such as:",
+            "bnf1":"Graphene in Concret",
+            "bnf2":"Polymer Pipes (HDPE/Graphene)",
+            "bnf3":"Graphene Electrodes for CDI Systems",
+            "bnf4":"Graphene Additives for Coin Cells"
+        }
+    },
     "footer": {
         "about": "About Us",
         "about_com": "PBR Company Limited",
@@ -423,6 +453,7 @@
     "button": {
         "readmore": "Read More →",
         "close":"Close",
-        "open":"Open"
+        "open":"Order Now",
+        "download":"Certificate"
     }
 }

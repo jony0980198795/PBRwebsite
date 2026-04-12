@@ -18,12 +18,10 @@ export default function ProductGallery({
     setMainImage
 }: GalleryProps) {
 
-    // รวมรูปภาพทั้งหมดที่จะแสดงในแถบ Thumbnail
     const allImages = [initialImage, ...graphImages];
 
     return (
         <div className="space-y-4">
-            {/* ส่วนแสดงรูปภาพหลัก */}
             <div className="aspect-square bg-white rounded-2xl shadow-sm border border-slate-200 p-8 flex items-center justify-center overflow-hidden">
                 <img
                     src={mainImage}

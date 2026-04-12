@@ -1,11 +1,35 @@
 'use client'
-import { motion } from "framer-motion";
+
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { Beaker, Construction, Globe, Zap } from "lucide-react";
 
 export default function News() {
+    const [currentIndex, setCurrentIndex] = useState(0);
     const { t } = useLanguage();
+
+    const conferences_image = [
+        "/exhibition/1.jpg",
+        "/exhibition/2.jpg",
+        "/exhibition/3.jpg",
+        "/exhibition/4.jpg",
+        "/exhibition/5.jpg",
+        "/exhibition/6.jpg",
+        "/exhibition/7.jpg",
+        "/exhibition/8.jpg",
+    ]
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % conferences_image.length);
+        }, 4000); // เปลี่ยนรูปทุกๆ 4 วินาที
+
+        return () => clearInterval(timer); // ล้าง Timer เมื่อปิดหน้า
+    }, [conferences_image.length]);
+
     const highlights = [
         {
             title: t.news.section.section_1.super,
@@ -50,7 +74,19 @@ export default function News() {
             link: "/our_research/health",
         },
     ];
+    const products = [
+        "Graphene Oxide (GO) Powder",
+        "Graphene Oxide (GO) Dispersion in H₂O",
+        "Reduced Graphene Oxide (rGO) Powder",
+        "Reduced Graphene Oxide (rGO) Dispersion in H₂O",
+    ];
 
+    const applications = [
+        { title: "Graphene in Concrete", icon: <Construction size={20} /> },
+        { title: "Polymer Pipes (HDPE/Graphene)", icon: <Zap size={20} /> },
+        { title: "Zinc Flake Coating", icon: <Beaker size={20} /> },
+        { title: "Electrodes for CDI Systems", icon: <Globe size={20} /> },
+    ];
     return (
         <main className="pt-16 flex flex-col items-center bg-gradient-to-b from-white to-gray-100">
             {/* Latest News */}
@@ -64,60 +100,154 @@ export default function News() {
                 >
                     <p>{t.news.title}</p>
                 </motion.h2>
+                <div className="flex flex-col lg:grid lg:grid-cols-9 gap-12 items-start max-w-6xl mx-auto">
+                    <div className="lg:col-span-4 space-y-8 text-slate-600 leading-relaxed text-lg">
+                        <p className="font-medium text-slate-900 text-xl">
+                            {t.news_conference.title}
+                        </p>
+                        <p>
+                            {t.news_conference.detail}
+                        </p>
+                        {/* Product List Box */}
+                        <div className="bg-slate-50 border-l-4 border-blue-600 p-6 rounded-xl shadow-sm">
+                            <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <Beaker className="text-blue-600" /> {t.news_conference.props.title}
+                            </h3>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm font-medium">
+                                <li className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400" /> {t.news_conference.props.prop_1}
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400" /> {t.news_conference.props.prop_2}
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400" /> {t.news_conference.props.prop_3}
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400" /> {t.news_conference.props.prop_4}
+                                </li>
+                            </ul>
+                        </div>
 
-                <div className="space-y-8 max-w-5xl mx-auto">
-                    {highlights.map((h, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{
-                                duration: 0.8,
-                                delay: i * 0.1,
-                                ease: "easeOut",
-                            }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            whileHover={{ scale: 1.02 }}
-                            className="flex flex-col md:flex-row items-center gap-6 bg-white border border-gray-200 
-                                   shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:bg-gray-50 
-                                   transition-all duration-500 cursor-pointer rounded-2xl p-5"
-                        >
-                            {/* 🔹 Image */}
-                            <div className="w-full md:w-60 h-60 overflow-hidden flex-shrink-0 rounded-xl relative group">
-                                <Image
-                                    src={h.image}
-                                    alt={h.title}
-                                    width={400}
-                                    height={400}
-                                    className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
-                                />
-                                {/* Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+                        {/* Applications Grid */}
+                        <div className="">
+
+                            {/* Title */}
+                            <div className="flex items-start">
+                                <h2 className="text-lg md:text-xl font-bold text-slate-800 border-l-4 border-blue-500 pl-3">
+                                    {t.news_conference.benefit.title}
+                                </h2>
                             </div>
 
-                            {/* 🔹 Text Content */}
-                            <div className="flex flex-col justify-between flex-1 md:pr-4">
-                                <div>
-                                    <h3 className="text-2xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                                        {h.title}
-                                    </h3>
-                                    <p className="mt-3 text-gray-700 leading-relaxed line-clamp-3">
-                                        {h.description}
-                                    </p>
-                                </div>
+                            {/* Card */}
+                            <div className="p-5 border  mt-4 border-slate-200 rounded-2xl shadow-sm hover:shadow-md hover:bg-blue-50 transition-all duration-300 group">
 
-                                {/* 🔹 ปุ่ม Read More */}
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="mt-4 self-start px-5 py-2 text-sm font-semibold bg-blue-600 text-white rounded-lg 
-                                           hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300"
+                                <ul className="space-y-3">
+                                    <li className="flex items-center gap-2 text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition">
+                                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                        {t.news_conference.benefit.bnf1}
+                                    </li>
+
+                                    <li className="flex items-center gap-2 text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition">
+                                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                        {t.news_conference.benefit.bnf2}
+                                    </li>
+
+                                    <li className="flex items-center gap-2 text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition">
+                                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                        {t.news_conference.benefit.bnf3}
+                                    </li>
+
+                                    <li className="flex items-center gap-2 text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition">
+                                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                        {t.news_conference.benefit.bnf4}
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    {/* --- Right Column: Image Box & Auto Slide --- */}
+                    <div className="lg:col-span-5 space-y-6">
+
+                        {/* Main Image Box (Slide ตัวนี้) */}
+                        <motion.div
+                            className="relative group rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-slate-200 border-8 border-white"
+                            whileHover={{ y: -10 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            {/* Overlay ไล่เฉด */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent z-10" />
+
+                            {/* แสดงผลรูปภาพหลักพร้อม Animation ตอนเปลี่ยนรูป */}
+                            <AnimatePresence mode="wait">
+                                <motion.img
+                                    key={currentIndex} // ใช้ Key เพื่อให้ React รู้ว่าต้องทำ Animation ใหม่เมื่อ Index เปลี่ยน
+                                    src={conferences_image[currentIndex]}
+                                    initial={{ opacity: 0, scale: 1.1 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    transition={{ duration: 0.7, ease: "easeInOut" }}
+                                    alt="Conference"
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </AnimatePresence>
+
+                            {/* ข้อความประกอบบนรูปภาพ */}
+                            <div className="absolute bottom-6 left-6 z-20 text-white">
+                                <motion.p
+                                    key={`text-p-${currentIndex}`}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="text-xs font-black uppercase tracking-[0.2em] text-blue-400 mb-1"
                                 >
-                                    {t.news.btn}
-                                </motion.button>
+                                    Global Innovation 2026
+                                </motion.p>
+                                <motion.h4
+                                    key={`text-h4-${currentIndex}`}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.1 }}
+                                    className="text-2xl font-black italic"
+                                >
+                                    Conference Highlights
+                                </motion.h4>
+                            </div>
+
+                            {/* แถบ Progress Bar เล็กๆ ด้านล่างรูป (บอกเวลา Slide) */}
+                            <div className="absolute bottom-0 left-0 w-full h-1.5 bg-white/20 z-30">
+                                <motion.div
+                                    key={`progress-${currentIndex}`}
+                                    initial={{ width: 0 }}
+                                    animate={{ width: "100%" }}
+                                    transition={{ duration: 4, ease: "linear" }} // วิ่ง 4 วินาทีเท่ากับเวลา Auto Slide
+                                    className="h-full bg-blue-500"
+                                />
                             </div>
                         </motion.div>
-                    ))}
+
+                        <div className="grid grid-cols-4 gap-3">
+                            {conferences_image.map((imgSrc, index) => (
+                                <div
+                                    key={index}
+                                    onClick={() => setCurrentIndex(index)} // คลิกแล้วเปลี่ยนรูปหลักทันที
+                                    className={`relative h-20 rounded-xl overflow-hidden cursor-pointer transition-all duration-500 border-4 
+                                    ${currentIndex === index
+                                            ? "border-blue-500 scale-105 shadow-lg ring-2 ring-blue-500/20"
+                                            : "border-white opacity-50 hover:opacity-100 hover:border-blue-200"
+                                        }
+                                    `}
+                                >
+                                    <img src={imgSrc} className="w-full h-full object-cover" alt={`thumbnail-${index}`} />
+
+                                    {/* Overlay สีฟ้าจางๆ ถ้าไม่ใช่รูปที่เลือก */}
+                                    {currentIndex !== index && (
+                                        <div className="absolute inset-0 bg-slate-900/20 hover:bg-transparent transition-colors" />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -163,7 +293,6 @@ export default function News() {
             </section>
             {/* Hero Section */}
             <section className="w-full mt-20 h-[70vh] relative flex items-center justify-center overflow-hidden">
-                {/* 🔹 BG Image พร้อม Zoom-in Animation */}
                 <motion.div
                     initial={{ scale: 1.1, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}

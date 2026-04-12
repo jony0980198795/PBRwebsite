@@ -4,7 +4,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function TechnicalSpecsClient({ productId }: { productId: string }) {
   const { t } = useLanguage();
-  
+
   // ดึงข้อมูลสินค้าจาก Dictionary (สมมติว่าคุณเก็บรายละเอียดไว้ใน t.products[id].details)
   const productInfo = t.products[productId];
 
@@ -18,15 +18,21 @@ export default function TechnicalSpecsClient({ productId }: { productId: string 
       <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
         <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
           <span className="w-2 h-6 bg-blue-600 rounded-full"></span>
-          {t.ui.properties_title || "Properties"} 
+          {t.ui.properties_title || "Properties"}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
-          {Object.entries(details.properties).map(([key, value]) => (
-            <div key={key} className="flex justify-between items-center py-3 border-b border-slate-50">
-              <span className="text-slate-500 capitalize">{key.replace(/([A-Z])/g, " $1")}:</span>
-              <span className="font-semibold text-slate-800">{value as string}</span>
-            </div>
-          ))}
+          {Object.entries(details.properties)
+            .sort(([keyA], [keyB]) => keyA.localeCompare(keyB))
+            .map(([key, value]) => (
+              <div key={key} className="flex justify-between items-center py-3 border-b border-slate-50">
+                <span className="text-slate-500 capitalize">
+                  {key.replace(/([A-Z])/g, " $1")}:
+                </span>
+                <span className="font-semibold text-slate-800">
+                  {value as string}
+                </span>
+              </div>
+            ))}
         </div>
       </div>
 

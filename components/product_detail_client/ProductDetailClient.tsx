@@ -46,7 +46,21 @@ export default function ProductDetailClient({ productId }: { productId: string }
             {translatedInfo.highlight}
           </p>
         </div>
-
+        <div className="w-full sm:w-fit">
+          <a
+            href={translatedInfo.file_path}
+            download={translatedInfo.file_name}
+            className="group relative flex items-center justify-center gap-3 px-4 py-2
+               bg-gradient-to-r from-blue-600 to-blue-700 
+               text-white rounded-2xl transition-all duration-300 mb-4"
+          >
+            {/* แสงเงาวิ่งผ่านตอน Hover */}
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform" />
+            <div className="flex flex-col items-start">
+              <span className="leading-tight tracking-wide">{t.button.download}</span>
+            </div>
+          </a>
+        </div>
         {/* 4. ส่วนสั่งซื้อ: ส่ง rawProduct (ID/Sizes) และใช้ชื่อจาก translatedInfo */}
         <OrderSection
           product={{ ...rawProduct, name: translatedInfo.pd_name }}

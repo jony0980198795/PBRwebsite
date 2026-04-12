@@ -123,22 +123,23 @@
                     "1,000 กรัม"
                 ],
                 "properties": {
-                    "sheetSize": "≈ 4–6 ไมโครเมตร (μm)",
-                    "particleSize":"300-800นาโนเมตร",
-                    "layer": "3.0–10.0 ชั้น",
-                    "synthesis": "Modified Hummers’ Method",
+                    "sheetSize": "≈ 4 – 6 ไมโครเมตร",
+                    "particleSize": "300 - 500 นาโนเมตร",
+                    "layer": "3.0 – 5.0 ชั้น",
+                    "thickness":"0.6 - 1.8 นาโนเมตร",
+                    "synthesis": "Modified Hummers Method",
                     "color": "สีน้ำตาล",
                     "smell": "ไม่มีกลิ่น",
                     "waterSolubility": "ละลายน้ำได้"
                 },
                 "elementalAnalysis": {
-                    "carbon": "คาร์บอน (Carbon): 50% < C < 70%",
-                    "oxygen": "ออกซิเจน (Oxygen): 30% < O < 50%"
+                    "carbon": "คาร์บอน: < 60.0 - 80.0%",
+                    "oxygen": "ออกซิเจน: 20.0 - 35.0%"
                 },
                 "specifications": {
                     "electricalConductivity": "~ 100 S/m",
-                    "specificSurfaceArea": "100-300 m²/g",
-                    "purity": ">99%"
+                    "specificSurfaceArea": "100 - 300 m²/g",
+                    "purity": "> 99%"
                 },
                 "applications": [
                     "ตัวเก็บประจุยิ่งยวด (Supercapacitors)",
@@ -147,7 +148,9 @@
                     "เพิ่มความแข็งแรงและการยืดหยุ่นของวัสดุ",
                     "เมมเบรนและสารเคลือบผิว"
                 ]
-            }
+            },
+            "file_path":"/files/cer_rgo.pdf",
+            "file_name":"Certificate_of_analysis_Go.pdf"
         },
         "pd_2": {
             "pd_name": "รีดิวซ์กราฟีนออกไซด์ชนิดผง",
@@ -161,22 +164,23 @@
                     "1,000 กรัม"
                 ],
                 "properties": {
-                    "sheetSize": " ≈ 4–6 ไมโครเมตร (μm)",
-                    "particleSize":"300-800นาโนเมตร",
-                    "layer": " 3.0–10.0 ชั้น",
-                    "synthesis": " Modified Hummers’ Method",
+                    "sheetSize": " ≈ 4 – 6 ไมโครเมตร",
+                    "particleSize": "300 - 500 นาโนเมตร",
+                    "thickness":"0.6 - 1.8 นาโนเมตร",
+                    "layer": " 3.0 – 5.0 ชั้น",
+                    "synthesis": " Modified Hummers Method",
                     "color": "สีดำ",
                     "smell": "ไม่มีกลิ่น",
                     "waterSolubility": "ไม่ละลายน้ำ"
                 },
                 "elementalAnalysis": {
-                    "carbon": "คาร์บอน (Carbon): C ≥ 70%",
-                    "oxygen": "ออกซิเจน (Oxygen): O ≥ 30%"
+                    "carbon": "คาร์บอน: ≥ 82%",
+                    "oxygen": "ออกซิเจน: ≤ 18%"
                 },
                 "specifications": {
-                    "electricalConductivity": "~ 100–1,000 S/m",
-                    "specificSurfaceArea": "500–700 m²/g",
-                    "purity": ">99%"
+                    "electricalConductivity": "~ 100 – 1,000 S/m",
+                    "specificSurfaceArea": "500 – 700 m²/g",
+                    "purity": "> 99%"
                 },
                 "applications": [
                     "ตัวเก็บประจุยิ่งยวด (Supercapacitors)",
@@ -188,7 +192,9 @@
                     "วัสดุชีวภาพ (Biomaterials)",
                     "สารเคลือบผิวโปร่งใสชนิดนำไฟฟ้า (Transparent conductive coating)"
                 ]
-            }
+            },
+            "file_path":"/files/cer_rgo.pdf",
+            "file_name":"Certificate_of_analysis_rGo.pdf"
         },
         "pd_3": {
             "pd_name": "กราฟีนออกไซด์ชนิดสารละลายในน้ำ",
@@ -203,22 +209,23 @@
                     "ความเข้มข้น 8 มก./มล."
                 ],
                 "properties": {
-                    "sheetSize": "≈ 4–6 ไมโครเมตร (μm)",
-                    "particleSize":"300-800นาโนเมตร",
-                    "layer": "3.0–10.0 ชั้น",
-                    "synthesis": "Modified Hummers’ Method",
+                    "sheetSize": "≈ 4 – 6 ไมโครเมตร",
+                    "particleSize": "300 - 800 นาโนเมตร",
+                    "layer": "3.0 – 5.0 ชั้น",
+                    "thickness":"0.6 - 1.8 นาโนเมตร",
+                    "synthesis": "Modified Hummers Method",
                     "color": "สีน้ำตาล",
                     "smell": "ไม่มีกลิ่น",
                     "waterSolubility": "ละลายน้ำได้"
                 },
                 "elementalAnalysis": {
-                    "carbon": "คาร์บอน (Carbon): 50 % < C < 70%",
-                    "oxygen": "ออกซิเจน (Oxygen): 30 % < O < 50%"
+                    "carbon": "คาร์บอน: ≥ 82%",
+                    "oxygen": "ออกซิเจน: 20.0 - 35.0%"
                 },
                 "specifications": {
                     "electricalConductivity": "~ 100 S/m",
-                    "specificSurfaceArea": "100–300 m²/g",
-                    "purity": ">99%"
+                    "specificSurfaceArea": "100 – 300 m²/g",
+                    "purity": "> 99%"
                 },
                 "applications": [
                     "ตัวเก็บประจุยิ่งยวด (Supercapacitors)",
@@ -227,7 +234,9 @@
                     "เพิ่มความทนทานต่อแรงดึงและความยืดหยุ่น (Tensile strength and Elasticity)",
                     "เมมเบรนและสารเคลือบผิว (Membranes and coating)"
                 ]
-            }
+            },
+            "file_path":"/files/cer_rgo.pdf",
+            "file_name":"Certificate_of_analysis_Go.pdf"
         },
         "pd_4": {
             "pd_name": "รีดิวซ์กราฟีนออกไซด์ชนิดสารละลายในน้ำ",
@@ -242,22 +251,23 @@
                     "ความเข้มข้น 2 มก./มล."
                 ],
                 "properties": {
-                    "sheetSize": "≈ 4–6 ไมโครเมตร (μm)",
-                    "particleSize":"300-800นาโนเมตร",
-                    "layer": "3.0–10.0 ชั้น",
-                    "synthesis": "Modified Hummers’ Method",
+                    "sheetSize": "≈ 4 – 6 ไมโครเมตร",
+                    "particleSize": "300 - 500 นาโนเมตร",
+                    "thickness":"0.6 - 1.8 นาโนเมตร",
+                    "layer": "3.0 – 5.0 ชั้น",
+                    "synthesis": "Modified Hummers Method",
                     "color": "สีดำ",
                     "smell": "ไม่มีกลิ่น",
                     "waterSolubility": "ไม่ละลายน้ำ"
                 },
                 "elementalAnalysis": {
-                    "carbon": "คาร์บอน (Carbon): C ≥ 70%",
-                    "oxygen": "ออกซิเจน (Oxygen): O ≥ 30%"
+                    "carbon": "คาร์บอน: ≥ 82%",
+                    "oxygen": "ออกซิเจน: ≤ 18%"
                 },
                 "specifications": {
-                    "electricalConductivity": "~ 100–1,000 S/m",
-                    "specificSurfaceArea": "500–700 m²/g",
-                    "purity": ">99%"
+                    "electricalConductivity": "~ 100 – 1,000 S/m",
+                    "specificSurfaceArea": "500 – 700 m²/g",
+                    "purity": "> 99%"
                 },
                 "applications": [
                     "ตัวเก็บประจุยิ่งยวด (Supercapacitors)",
@@ -269,7 +279,9 @@
                     "วัสดุชีวภาพ (Biomaterials)",
                     "สารเคลือบผิวโปร่งใสชนิดนำไฟฟ้า (Transparent conductive coating)"
                 ]
-            }
+            },
+            "file_path":"/files/cer_rgo.pdf",
+            "file_name":"Certificate_of_analysis_rGo.pdf"
         }
     },
     "innovation": {
@@ -396,7 +408,25 @@
     },
     "button": {
         "readmore": "อ่านเพิ่มเติม",
-        "close":"ปิด",
-        "open":"เปิด"
+        "close": "ปิด",
+        "open": "สั่งซื้อ",
+        "download":"ใบรับรอง"
+    },
+    "news_conference": {
+        "title": "บริษัท VN Graphene Global และ บริษัท PBR จำกัด ได้เข้าร่วมงานประชุมวิทยาศาสตร์วัสดุนาโนเทคโนโลยีและกราฟีน",
+        "detail": "เวทีนานาชาติที่สำคัญสำหรับนวัตกรรมนาโนเทคโนโลยี ทีมงานของเราได้แลกเปลี่ยนความรู้กับผู้เชี่ยวชาญจากทั่วโลก และได้รับข้อมูลเชิงลึกเกี่ยวกับการใช้งานในอุตสาหกรรมล่าสุด",
+        "props": {
+            "title": "ผลิตภัณฑ์เด่น",
+            "prop_1": "ผงกราฟีนออกไซด์ (GO)",
+            "prop_2": "กราฟีนออกไซด์ (GO) ในรูปแบบสารแขวนลอยในน้ำ (H₂O)",
+            "prop_3": "ผงรีดิวซ์กราฟีนออกไซด์ (rGO)",
+            "prop_4": "รีดิวซ์กราฟีนออกไซด์ (rGO) ในรูปแบบสารแขวนลอยในน้ำ (H₂O)"
+        },
+        "benefit": {
+            "bnf1": "การใช้กราฟีนในคอนกรีต",
+            "bnf2": "ท่อโพลิเมอร์ (HDPE/กราฟีน)",
+            "bnf3": "อิเล็กโทรดกราฟีนสำหรับระบบ CDI",
+            "bnf4": "สารเติมแต่งกราฟีนสำหรับแบตเตอรี่แบบ Coin Cell"
+        }
     }
 }
